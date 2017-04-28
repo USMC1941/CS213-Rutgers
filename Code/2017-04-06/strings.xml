@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RU NB Bus Routes</string>
+    <string-array name="routes_array">
+        <item>A: College Ave/Busch</item>
+        <item>B: Livingston/Busch</item>
+        <item>C: Busch Commuter Shuttle</item>
+        <item>EE: College Ave/Douglass-Cook</item>
+        <item>F: College Ave/Douglass-Cook</item>
+        <item>H: College Ave/Busch</item>
+        <item>LX: College Ave/Livingston</item>
+        <item>REXL: Douglass/Livingston</item>
+        <item>REXB: Douglass/Busch</item>
+    </string-array>
+
+</resources>

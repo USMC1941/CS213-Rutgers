@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FC</string>
+    <string name="flabel">Fahrenheit</string>
+    <string name="clabel">Celsius</string>
+    <string name="f2clabel">>>></string>
+    <string name="c2flabel">&lt;&lt;&lt;</string>
+    <string name="f_hint">32.0</string>
+    <string name="c_hint">0.0</string>
+
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="name_label">Name: (required)</string>
+    <string name="year_label">Year: (required)</string>
+    <string name="director_label">Director:</string>
+    <string name="name_hint">Jason Bourne</string>
+    <string name="year_hint">2016</string>
+    <string name="director_hint">Paul Greengrass</string>
+    <string name="save_label">SAVE</string>
+    <string name="cancel_label">CANCEL</string>
+    <string name="add">Add</string>
+
+
+    <string-array name="movies_array">
+        <item>Get Out|2017</item>
+        <item>Logan|2017</item>
+        <item>Doctor Strange|2016</item>
+        <item>Jason Bourne|2016</item>
+        <item>Sully|2016</item>
+        <item>The Martian|2015</item>
+        <item>Mad Max:Fury Road|2015</item>
+        <item>Sicario|2015</item>
+        <item>Straight Outta Compton|2015</item>
+        <item>Fifty Shades of Grey|2015</item>
+        <item>American Sniper|2014</item>
+        <item>Transcendence|2014</item>
+        <item>Conan the Barbarian|2011</item>
+        <item>The Last Airbender|2011</item>
+        <item>The Gift|2010</item>
+    </string-array>
+
+    <string name="search">Search</string>
+    <string name="search_hint">Search Movie</string>
+    <string name="search_empty">No match found for \"%s\"</string>
+
+</resources>
