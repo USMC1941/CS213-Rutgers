@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chessboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/player"
+            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            app:srcCompat="@drawable/whiteking" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:textSize="20sp"
+            android:text="TextView" />
+
+        <CheckBox
+            android:id="@+id/checkDraw"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_width="110dp"
+            android:text="Draw?" />
+
+    </LinearLayout>
+
+    <include android:id="@+id/includeboard"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        layout="@layout/board"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnAI"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="AI" />
+
+        <Button
+            android:id="@+id/btnRollback"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="UnDo" />
+
+        <Button
+            android:id="@+id/btnDraw"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="Draw" />
+
+        <Button
+            android:id="@+id/btnResign"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="Resign" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="Main" />
+
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="New" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/btnPlayBack"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="RePlay" />
+
+    </LinearLayout>
+
+</LinearLayout>

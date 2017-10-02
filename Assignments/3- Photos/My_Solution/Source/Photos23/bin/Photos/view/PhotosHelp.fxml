@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Authors: William Chen and Chijun Sha-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/8.0.121">
+
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Program designed by William Chen and Chijun Sha.">
+      <VBox.margin>
+         <Insets left="10.0" top="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logging In:">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Input either an username or &quot;admin&quot; to login.">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  -> The admin can create a new user or delete an existing user.">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inside the Application:">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A list of albums will be shown. The user can edit the name of the album.">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inside an album:">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You can add a picture from the file system on your computer.">
+        <VBox.margin>
+            <Insets left="10.0" />
+        </VBox.margin>
+    </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Right clicking on a picture gives you options to:">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-> Move the picture to another album.">
+        <VBox.margin>
+            <Insets left="10.0" />
+        </VBox.margin>
+    </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-> Delete the picture from the album.">
+        <VBox.margin>
+            <Insets left="10.0" />
+        </VBox.margin>
+    </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-> Copy the picture to another album.">
+        <VBox.margin>
+            <Insets left="10.0" />
+        </VBox.margin>
+    </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Clicking on a picture itself allows for editing of captions. Use right pane to view and add/delete tags.">
+        <VBox.margin>
+            <Insets left="10.0" />
+        </VBox.margin>
+    </Text>
+</VBox>

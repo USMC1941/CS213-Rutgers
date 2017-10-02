@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/buttonPlayChess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Chess" />
+
+    <Button
+        android:id="@+id/buttonListGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Replay Saved Games" />
+
+    <Button
+        android:id="@+id/buttonPlayback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Replay Last Game" />
+
+</LinearLayout>
