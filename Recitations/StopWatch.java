@@ -43,15 +43,15 @@ public class StopWatch {
 					System.out.println("Stop");
 					s.start = false;
 					if (stopWatchThread.getState()==Thread.State.TIMED_WAITING) {
-                        stopWatchThread.interrupt();
-                    }
+						stopWatchThread.interrupt();
+					}
 				}
 				else if (command.equals("r")) {
 					System.out.println("Reset");
 					s.reset = true;
 					if (stopWatchThread.getState()==Thread.State.TIMED_WAITING) {
-                        stopWatchThread.interrupt();
-                    }
+						stopWatchThread.interrupt();
+					}
 				}
 				else if (command.equals("t")) {
 					System.out.println("Start");
@@ -62,21 +62,21 @@ public class StopWatch {
 					System.out.println("Quit");
 					s.quit = true;
 					if (stopWatchThread.getState()==Thread.State.TIMED_WAITING) {
-                        stopWatchThread.interrupt();
-                    }
+						stopWatchThread.interrupt();
+					}
 					stopWatchThread.join();
 					break;
 				}
 			} while (true);
 		}
 		catch (InterruptedException e) {
-		    System.out.println("Exiting");
+			System.out.println("Exiting");
 		}	
 	}
 }
 
 class StopWatchThread implements Runnable {
-    public boolean quit = false;
+	public boolean quit = false;
 	public boolean start = true;
 	public boolean reset = false;
 	public long startTime; 
@@ -86,13 +86,13 @@ class StopWatchThread implements Runnable {
 	@Override
 	public void run() {
 		startTime = System.currentTimeMillis();
-        Watch w = new Watch();
+		Watch w = new Watch();
 		// animation loop
 		while (true) {
-		    System.out.println();
+			System.out.println();
 			if (quit) {
-                break;
-            }
+				break;
+			}
 			if (reset) {
 				w.reset();
 				startTime = System.currentTimeMillis();
@@ -105,14 +105,11 @@ class StopWatchThread implements Runnable {
 					w.stepUp();
 				}
 				catch (InterruptedException e) {
-				    //
+					 //
 				}
-				
 			}
-			
 		}
 	}
-
 }
 
 class Watch {
@@ -126,25 +123,26 @@ class Watch {
 		secs = 0;
 		allStr = " 00:00";
 	}
-	
+
 	public void stepUp() {
 		secs = secs + 5;
-		if (secs == 60)	{ 
+		if (secs == 60) {
 			mins = (mins + 1) % 60;
 			secs = 0;
 		}
 		if (mins >= 15) {
-            mins = mins - 15;
-        }
+			mins = mins - 15;
+		}
+
 		String minsStr = String.valueOf(mins);
 		String secsStr = String.valueOf(secs);
-		
+
 		if (mins < 10) {
-            minsStr = "0" + minsStr;
-        }
-		if (secs < 10) {
-            secsStr = "0" + secsStr;
-        }
+			minsStr = "0" + minsStr;
+		}
+		if (secs > 10) {
+			secsStr = "0" + secsStr;
+		}
 		allStr = " " + minsStr + ":" + secsStr;
 		System.out.println(allStr);
 	}
