@@ -6,30 +6,30 @@ import java.io.InputStreamReader;
  * Use threads to implement a stop watch that displays,
  * once every five seconds, the minutes and seconds that
  * have passed since it was started.
- *
+ * <p>
  * The display should be in the form mm:ss for minutes and seconds.
- *
+ * <p>
  * When the clock reaches 15 minutes, it should wrap back and start at 0
  * minutes and 0 seconds.
- *
+ * <p>
  * The user should be able to stop the watch at any time.
- *
+ * <p>
  * Write the complete code for the application.
- *
+ * <p>
  * (Not the most accurate stop watch, but the model is useful for
  * animations in which slight inaccuracies in time would not be detrimental.)
  */
 public class StopWatch {
 
-	public static void main(String[] args){
-		StopWatchThread s = new StopWatchThread();
-		Thread stopWatchThread = new Thread(s);
-		
+	public static void main(String[] args) {
+		StopWatchThread s               = new StopWatchThread();
+		Thread          stopWatchThread = new Thread(s);
+
 		stopWatchThread.start();
 		BufferedReader br;
-		String command;
+		String         command;
 		br = new BufferedReader(new InputStreamReader(System.in));
-		
+
 		try {
 			// current thread wait for input and check if it is cmd to the watch
 			do {
@@ -42,44 +42,45 @@ public class StopWatch {
 				if (command.equalsIgnoreCase("s")) {
 					System.out.println("Stop");
 					s.start = false;
-					if (stopWatchThread.getState()==Thread.State.TIMED_WAITING) {
+					if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
 						stopWatchThread.interrupt();
 					}
 				}
 				else if (command.equals("r")) {
 					System.out.println("Reset");
 					s.reset = true;
-					if (stopWatchThread.getState()==Thread.State.TIMED_WAITING) {
+					if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
 						stopWatchThread.interrupt();
 					}
 				}
 				else if (command.equals("t")) {
 					System.out.println("Start");
 					s.startTime = System.currentTimeMillis();
-					s.start =true;
+					s.start = true;
 				}
 				else if (command.equalsIgnoreCase("q")) {
 					System.out.println("Quit");
 					s.quit = true;
-					if (stopWatchThread.getState()==Thread.State.TIMED_WAITING) {
+					if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
 						stopWatchThread.interrupt();
 					}
 					stopWatchThread.join();
 					break;
 				}
-			} while (true);
+			}
+			while (true);
 		}
 		catch (InterruptedException e) {
 			System.out.println("Exiting");
-		}	
+		}
 	}
 }
 
 class StopWatchThread implements Runnable {
-	public boolean quit = false;
+	public boolean quit  = false;
 	public boolean start = true;
 	public boolean reset = false;
-	public long startTime; 
+	public long    startTime;
 	// delay is five second
 	int delay = 5000;
 
@@ -105,7 +106,7 @@ class StopWatchThread implements Runnable {
 					w.stepUp();
 				}
 				catch (InterruptedException e) {
-					 //
+					//
 				}
 			}
 		}
@@ -115,9 +116,9 @@ class StopWatchThread implements Runnable {
 class Watch {
 	int mins;
 	int secs;
-	
+
 	String allStr;
-	
+
 	public Watch() {
 		mins = 0;
 		secs = 0;
@@ -146,8 +147,8 @@ class Watch {
 		allStr = " " + minsStr + ":" + secsStr;
 		System.out.println(allStr);
 	}
-	
-	public void reset()	{
+
+	public void reset() {
 		mins = 0;
 		secs = 0;
 		allStr = " 00:00";
