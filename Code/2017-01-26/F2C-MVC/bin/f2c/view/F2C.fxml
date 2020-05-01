@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<GridPane 
+	xmlns="http://javafx.com/javafx/8.0.40"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="f2c.view.F2CController"
+	vgap="10" hgap="10">
+	
+	<Text text="Fahrenheit" GridPane.valignment="BOTTOM"/>
+	<Button fx:id="f2c" text="&gt;&gt;&gt;" GridPane.columnIndex="1" onAction="#convert"/>
+	<Text text="Celsius" GridPane.columnIndex="2" GridPane.valignment="BOTTOM"/>
+	<TextField fx:id="f" prefColumnCount="10" promptText="-40.0" GridPane.rowIndex="1" />
+	<Button fx:id="c2f" text="&lt;&lt;&lt;" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#convert"/>
+	<TextField fx:id="c" prefColumnCount="10" promptText="-40.0" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+		
+	<padding>
+		<Insets top="10" right="10" bottom="10" left="10"/>
+	</padding>
+	
+</GridPane>
+

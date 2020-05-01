@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import java.util.ArrayList?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="10.0"
+          vgap="10.0"
+          xmlns="http://javafx.com/javafx/8.0.40"
+          fx:controller="view.OperatorController">
+
+   <Button fx:id="plus" onAction="#operatorPressed" text="  +  " GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+   <Button fx:id="minus" onAction="#operatorPressed" text="  -  " GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+   <Button fx:id="div" onAction="#operatorPressed" text="  /  " GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
+   <Button fx:id="mult" onAction="#operatorPressed" text="  *  " GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+
+   <fx:define>
+      <ArrayList fx:id="operatorButtons">
+         <fx:reference source="plus"/>
+         <fx:reference source="minus"/>
+         <fx:reference source="div"/>
+         <fx:reference source="mult"/>
+      </ArrayList>
+   </fx:define>
+
+   <padding>
+      <Insets bottom="10.0" left="10.0" top="10.0"/>
+   </padding>
+
+   <stylesheets>
+      <URL value="@ops.css"/>
+   </stylesheets>
+
+</GridPane>
