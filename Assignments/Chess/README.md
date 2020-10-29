@@ -85,9 +85,9 @@ A player may offer a draw by appending `"draw?"` to the end of an otherwise regu
    -  5 pts: Game starts with black making the first move
    -  5 pts: Javadoc HTML not generated
    -  Up to 5 pts: Incomplete Javadoc tags in code
-   -  5 pts (individual): No Bitbucket commit by `DDDD-MM-YY`.
+   -  5 pts (individual): No Bitbucket commit by `YYYY-MM-DD`.
    -  10 pts: Every time you ask us and we test another commit version in your repository that is earlier than the last commit before the deadline.
-   -  10 pts: For every 2 hours of lateness, in case there is nothing in the repository for us to test as of the deadline of `DDDD-MM-YY`.
+   -  10 pts: For every 2 hours of lateness, in case there is nothing in the repository for us to test as of the deadline of `YYYY-MM-DD`.
 
       NOTE: This 2 hour block will be applied STRICTLY starting any time after `XX` PM (even if it is one second), in increments of 2 hours. NO EXCEPTIONS.
 
@@ -103,7 +103,7 @@ Create a `docs` directory under the project. You will put your complete generate
 
 **Make your Eclipse project folder the root of your Bitbucket repository**. This way, when we get your project from Bitbucket, we get the entire Eclipse project space, with source and binary files, and all data that is in the project in the right places. (Strictly speaking, we don't need the binaries, so if you find another way to set up your repo that holds all project source and data files, that's fine.)
 
-**EACH partner in the team will make a first Bitbucket commit in the project by `DDDD-MM-YY`**. The first BitBucket commit does not have to be any Java code, you may commit any text file, with as little as a single letter in it.
+**EACH partner in the team will make a first Bitbucket commit in the project by `YYYY-MM-DD`**. The first BitBucket commit does not have to be any Java code, you may commit any text file, with as little as a single letter in it.
 
 Thereafter, you will make commits incrementally, as and when you add reasonable functionality to your implementation. Aside from that first commit that should come from each partner, we are not asking for a specific number of commits from either partner, as long as you have found a way to work together.
 
