@@ -12,7 +12,9 @@ public class A {
    public A(int a, int b) {
    }
 }
+```
 
+```java
 public class B extends A {
    public B(int r) {
    }
