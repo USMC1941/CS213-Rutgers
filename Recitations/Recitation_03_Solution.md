@@ -331,7 +331,7 @@ public class Customer implements Comparable<Customer> {
 
    public int compareTo(Customer c) {
       if (c == null) {
-         return -1; // assuming you want null values shown last}
+         return -1; // assuming you want null values shown last
       }
       String cLastName = c.getLastName();
       if (lastName == null && cLastName == null) {
