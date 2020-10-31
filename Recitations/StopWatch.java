@@ -20,138 +20,138 @@ import java.io.InputStreamReader;
  * animations in which slight inaccuracies in time would not be detrimental.)
  */
 public class StopWatch {
+   public static void main(String[] args) {
+      StopWatchThread s               = new StopWatchThread();
+      Thread          stopWatchThread = new Thread(s);
 
-	public static void main(String[] args) {
-		StopWatchThread s               = new StopWatchThread();
-		Thread          stopWatchThread = new Thread(s);
+      stopWatchThread.start();
+      BufferedReader br;
+      String         command;
+      br = new BufferedReader(new InputStreamReader(System.in));
 
-		stopWatchThread.start();
-		BufferedReader br;
-		String         command;
-		br = new BufferedReader(new InputStreamReader(System.in));
-
-		try {
-			// current thread wait for input and check if it is cmd to the watch
-			do {
-				try {
-					command = br.readLine();
-				}
-				catch (IOException e) {
-					command = "unknown";
-				}
-				if (command.equalsIgnoreCase("s")) {
-					System.out.println("Stop");
-					s.start = false;
-					if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
-						stopWatchThread.interrupt();
-					}
-				}
-				else if (command.equals("r")) {
-					System.out.println("Reset");
-					s.reset = true;
-					if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
-						stopWatchThread.interrupt();
-					}
-				}
-				else if (command.equals("t")) {
-					System.out.println("Start");
-					s.startTime = System.currentTimeMillis();
-					s.start = true;
-				}
-				else if (command.equalsIgnoreCase("q")) {
-					System.out.println("Quit");
-					s.quit = true;
-					if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
-						stopWatchThread.interrupt();
-					}
-					stopWatchThread.join();
-					break;
-				}
-			}
-			while (true);
-		}
-		catch (InterruptedException e) {
-			System.out.println("Exiting");
-		}
-	}
+      try {
+         // current thread wait for input and check if it is cmd to the watch
+         do {
+            try {
+               command = br.readLine();
+            }
+            catch (IOException e) {
+               command = "unknown";
+            }
+            if (command.equalsIgnoreCase("s")) {
+               System.out.println("Stop");
+               s.start = false;
+               if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
+                  stopWatchThread.interrupt();
+               }
+            }
+            else if (command.equals("r")) {
+               System.out.println("Reset");
+               s.reset = true;
+               if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
+                  stopWatchThread.interrupt();
+               }
+            }
+            else if (command.equals("t")) {
+               System.out.println("Start");
+               s.startTime = System.currentTimeMillis();
+               s.start = true;
+            }
+            else if (command.equalsIgnoreCase("q")) {
+               System.out.println("Quit");
+               s.quit = true;
+               if (stopWatchThread.getState() == Thread.State.TIMED_WAITING) {
+                  stopWatchThread.interrupt();
+               }
+               stopWatchThread.join();
+               break;
+            }
+         }
+         while (true);
+      }
+      catch (InterruptedException e) {
+         System.out.println("Exiting");
+      }
+   }
 }
 
 class StopWatchThread implements Runnable {
-	public boolean quit  = false;
-	public boolean start = true;
-	public boolean reset = false;
-	public long    startTime;
-	// delay is five second
-	int delay = 5000;
+   public boolean quit  = false;
+   public boolean start = true;
+   public boolean reset = false;
+   public long    startTime;
 
-	@Override
-	public void run() {
-		startTime = System.currentTimeMillis();
-		Watch w = new Watch();
-		// animation loop
-		while (true) {
-			System.out.println();
-			if (quit) {
-				break;
-			}
-			if (reset) {
-				w.reset();
-				startTime = System.currentTimeMillis();
-				reset = false;
-			}
-			if (start) {
-				try {
-					startTime += delay;
-					Thread.sleep(Math.max(0, startTime - System.currentTimeMillis()));
-					w.stepUp();
-				}
-				catch (InterruptedException e) {
-					//
-				}
-			}
-		}
-	}
+   // delay is five second
+   int delay = 5000;
+
+   @Override
+   public void run() {
+      startTime = System.currentTimeMillis();
+      Watch w = new Watch();
+      // animation loop
+      while (true) {
+         System.out.println();
+         if (quit) {
+            break;
+         }
+         if (reset) {
+            w.reset();
+            startTime = System.currentTimeMillis();
+            reset = false;
+         }
+         if (start) {
+            try {
+               startTime += delay;
+               Thread.sleep(Math.max(0, startTime - System.currentTimeMillis()));
+               w.stepUp();
+            }
+            catch (InterruptedException e) {
+               //
+            }
+         }
+      }
+   }
 }
 
 class Watch {
-	int mins;
-	int secs;
+   int mins;
+   int secs;
 
-	String allStr;
+   String allStr;
 
-	public Watch() {
-		mins = 0;
-		secs = 0;
-		allStr = " 00:00";
-	}
+   public Watch() {
+      mins = 0;
+      secs = 0;
+      allStr = " 00:00";
+   }
 
-	public void stepUp() {
-		secs = secs + 5;
-		if (secs == 60) {
-			mins = (mins + 1) % 60;
-			secs = 0;
-		}
-		if (mins >= 15) {
-			mins = mins - 15;
-		}
+   public void stepUp() {
+      secs = secs + 5;
+      if (secs == 60) {
+         mins = (mins + 1) % 60;
+         secs = 0;
+      }
+      if (mins >= 15) {
+         mins = mins - 15;
+      }
 
-		String minsStr = String.valueOf(mins);
-		String secsStr = String.valueOf(secs);
+      String minsStr = String.valueOf(mins);
+      String secsStr = String.valueOf(secs);
 
-		if (mins < 10) {
-			minsStr = "0" + minsStr;
-		}
-		if (secs > 10) {
-			secsStr = "0" + secsStr;
-		}
-		allStr = " " + minsStr + ":" + secsStr;
-		System.out.println(allStr);
-	}
+      if (mins < 10) {
+         minsStr = "0" + minsStr;
+      }
+      if (secs > 10) {
+         secsStr = "0" + secsStr;
+      }
+      allStr = " " + minsStr + ":" + secsStr;
+      System.out.println(allStr);
+   }
 
-	public void reset() {
-		mins = 0;
-		secs = 0;
-		allStr = " 00:00";
-		System.out.println(allStr);
-	}
+   public void reset() {
+      mins = 0;
+      secs = 0;
+      allStr = " 00:00";
+      System.out.println(allStr);
+   }
 }
