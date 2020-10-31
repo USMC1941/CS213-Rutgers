@@ -45,229 +45,241 @@ Which of the following are legitimate calls to construct instances of the `B` cl
 
 ## Problem 2 - Inheritance/Dynamic Binding
 
--  a. Will the following code compile? If not, where exactly will it fail to compile?
+### a.
 
-   ```java
-   public class A {
-      public int x;
+Will the following code compile? If not, where exactly will it fail to compile?
 
-      public A(int x) {
-         this.x = x;
+```java
+public class A {
+   public int x;
+
+   public A(int x) {
+      this.x = x;
+   }
+}
+```
+
+```java
+public class B extends A {
+   public int y;
+
+   public B(int y) {
+      this.y = y;
+   }
+}
+```
+
+#### Answer
+
+The class B will not compile. The error is that the constructor `B(int y)` implicitly calls the constructor `A()`, which does not exist. Constructors of subclasses must call, explicitly or implicitly, a valid constructor of the superclass (or transitively, through a call to another constructor in the same class), before any other statement in the method.
+
+### b.
+
+Given:
+
+```java
+public class B {
+   public int x;
+
+   public String toString() {
+      return x + "";
+   }
+}
+```
+
+```java
+public class E extends B {
+   public int y = 3;
+
+   public String toString() {
+      return (x + y) + "";
+   }
+}
+```
+
+What is the output of the following code segment:
+
+```java
+public static void main(String[] args) {
+   B b = new E();
+   b.x = 5;
+   System.out.println(b);
+}
+```
+
+#### Answer
+
+Output: 8
+
+With dynamic binding, the version of `toString()` in `E` is called.
+
+### c.
+
+Given:
+
+```java
+public class B {
+   private int x;
+
+   public int getX() {
+      return x;
+   }
+
+   public String toString() {
+      return x + "";
+   }
+}
+```
+
+```java
+public class E extends B {
+   public int y = 3;
+
+   public String toString() {
+      return getX() + y + "";
+   }
+}
+```
+
+What is the output of the following code segment, which is in a different class than `B` or `E`:
+
+```java
+public static void main(String[] args) {
+   B b = new E();
+   System.out.println(b);
+}
+```
+
+#### Answer
+
+Output: 3
+
+1. When an instance of `E` is created in the first statement above (before any constructor is called to initialize the object), its inherited field `x` gets a value of `0` by default, and its field `y` is explicitly set to 3
+2. `E` does not have an explicit constructor, so the default constructor comes into play, which is called in the first statement above to initialize a new `E` object.
+3. The default constructor implictly calls `super()` on superclass `B`
+4. Since `B` does not explicitly define a constructor, again its default constructor comes into play, which does no initialization. This means the inherited `x` in `E` retains its default value of `0` set at object creation time
+5. In the second, `println` statement, the `toString()` version of `E` is called, by dynamic binding, which returns `0` (for `getX()`) + 3 (for `y`)
+
+### d.
+
+Given:
+
+```java
+public class V {
+   public static int stuff() {
+      return 1;
+   }
+}
+```
+
+```java
+public class W extends V {
+   public static int stuff() {
+      return 2;
+   }
+}
+```
+
+What is the output of the following code segment, which is in a different class than `W` or `V`:
+
+```java
+public static void main(String[] args) {
+   V v = new W();
+   System.out.println(v.stuff());
+}
+```
+
+#### Answer
+
+Output: 1
+
+Since `stuff()` is static, dynamic binding is not done when it is called. Since the call is via `v`, whose static (compile time) type is `V`, the `V` version of `stuff()` is called, even though `v` refers to a `W` instance.
+
+### e.
+
+Given:
+
+```java
+public class G {
+   public int g;
+}
+```
+
+```java
+public class H extends G {
+   public int h;
+
+   public boolean equals(Object o) {
+      if (o == null || !(o instanceof H)) {
+         return false;
       }
+      return g == ((H) o).g;
    }
-   ```
+}
+```
 
-   ```java
-   public class B extends A {
-      public int y;
+What is the output of the following code segment, which is in a different class than `H` or `G`:
 
-      public B(int y) {
-         this.y = y;
-      }
+#### Answer
+
+Output: 20
+
+1. `ag.equals(bg)` ends up calling the `H` version of equals by dynamic binding
+2. Which checks if object `bg` is of type `H`. `bg` is not, so this check fails and so `equals(bg)` returns `false`, and `20` is printed
+
+```java
+public static void main(String[] args) {
+   G ag = new H();
+   ag.g = 15;
+   G bg = new G();
+   bg.g = 15;
+   if (ag.equals(bg)) {
+      System.out.println(10);
    }
-   ```
-
-   **Answer**
-
-   > The class B will not compile. The error is that the constructor B(int y) implicitly calls the constructor A(), which does not exist. Constructors of subclasses must call, explicitly or implicitly, a valid constructor of the superclass (or transitively, through a call to another constructor in the same class), before any other statement in the method.
-
--  b. Given:
-
-   ```java
-   public class B {
-      public int x;
-
-      public String toString() {
-         return x + "";
-      }
+   else {
+      System.out.println(20);
    }
-   ```
+}
+```
 
-   ```java
-   public class E extends B {
-      public int y = 3;
+### f.
 
-      public String toString() {
-         return (x + y) + "";
-      }
+Given:
+
+```java
+public class B {
+   public int x;
+
+   public String toString() {
+      return x + "";
    }
-   ```
+}
+```
 
-   What is the output of the following code segment:
+```java
+public class E extends B {
+   public int y = 3;
 
-   ```java
-   public static void main(String[] args) {
-      B b = new E();
-      b.x = 5;
-      System.out.println(b);
+   public String toString() {
+      return (x + y) + "";
    }
-   ```
+}
+```
 
-   **Answer**
+What is the output of the following code segment, which is in a different class than `B` or `E`:
 
-   > Output: 8
-   >
-   > With dynamic binding, the version of `toString()` in `E` is called.
+```java
+public static void main(String[] args) {
+   B b = new E();
+   System.out.println(b.y);
+}
+```
 
--  c. Given:
+#### Answer
 
-   ```java
-   public class B {
-      private int x;
+    Compile error.
 
-      public int getX() {
-         return x;
-      }
-
-      public String toString() {
-         return x + "";
-      }
-   }
-   ```
-
-   ```java
-   public class E extends B {
-      public int y = 3;
-
-      public String toString() {
-         return getX() + y + "";
-      }
-   }
-   ```
-
-   What is the output of the following code segment, which is in a different class than `B` or `E`:
-
-   ```java
-   public static void main(String[] args) {
-      B b = new E();
-      System.out.println(b);
-   }
-   ```
-
-   **Answer**
-
-   > Output: 3
-   >
-   > 1. When an instance of `E` is created in the first statement above (before any constructor is called to initialize the object), its inherited field `x` gets a value of `0` by default, and its field `y` is explicitly set to 3
-   > 2. `E` does not have an explicit constructor, so the default constructor comes into play, which is called in the first statement above to initialize a new `E` object.
-   > 3. The default constructor implictly calls `super()` on superclass `B`
-   > 4. Since `B` does not explicitly define a constructor, again its default constructor comes into play, which does no initialization. This means the inherited `x` in `E` retains its default value of `0` set at object creation time
-   > 5. In the second, `println` statement, the `toString()` version of `E` is called, by dynamic binding, which returns `0` (for `getX()`) + 3 (for `y`)
-
--  d. Given:
-
-   ```java
-   public class V {
-      public static int stuff() {
-         return 1;
-      }
-   }
-   ```
-
-   ```java
-   public class W extends V {
-      public static int stuff() {
-         return 2;
-      }
-   }
-   ```
-
-   What is the output of the following code segment, which is in a different class than `W` or `V`:
-
-   ```java
-   public static void main(String[] args) {
-      V v = new W();
-      System.out.println(v.stuff());
-   }
-   ```
-
-   **Answer**
-
-   > Output: 1
-   >
-   > Since `stuff()` is static, dynamic binding is not done when it is called. Since the call is via `v`, whose static (compile time) type is `V`, the `V` version of `stuff()` is called, even though `v` refers to a `W` instance.
-
--  e. Given:
-
-   ```java
-   public class G {
-      public int g;
-   }
-   ```
-
-   ```java
-   public class H extends G {
-      public int h;
-
-      public boolean equals(Object o) {
-         if (o == null || !(o instanceof H)) {
-            return false;
-         }
-         return g == ((H) o).g;
-      }
-   }
-   ```
-
-   What is the output of the following code segment, which is in a different class than `H` or `G`:
-
-   **Answer**
-
-   > Output: 20
-
-   > 1. `ag.equals(bg)` ends up calling the `H` version of equals by dynamic binding
-   > 2. Which checks if object `bg` is of type `H`. `bg` is not, so this check fails and so `equals(bg)` returns `false`, and `20` is printed
-
-   ```java
-   public static void main(String[] args) {
-      G ag = new H();
-      ag.g = 15;
-      G bg = new G();
-      bg.g = 15;
-      if (ag.equals(bg)) {
-         System.out.println(10);
-      }
-      else {
-         System.out.println(20);
-      }
-   }
-   ```
-
--  f. Given:
-
-   ```java
-   public class B {
-      public int x;
-
-      public String toString() {
-         return x + "";
-      }
-   }
-   ```
-
-   ```java
-   public class E extends B {
-      public int y = 3;
-
-      public String toString() {
-         return (x + y) + "";
-      }
-   }
-   ```
-
-   What is the output of the following code segment, which is in a different class than `B` or `E`:
-
-   ```java
-   public static void main(String[] args) {
-      B b = new E();
-      System.out.println(b.y);
-   }
-   ```
-
-   **Answer**
-
-   > Compile error.
-   >
-   > The compiler sees the statement `b.y`, and will pass it if there is a `y` field in class `B`, since `b` is of static type `B`. Since `B` does not have a `y` field, the compiler flags an error.
+    The compiler sees the statement `b.y`, and will pass it if there is a `y` field in class `B`, since `b` is of static type `B`. Since `B` does not have a `y` field, the compiler flags an error.
 
 ## Problem 3
 

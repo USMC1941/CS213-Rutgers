@@ -36,190 +36,202 @@ Which of the following are legitimate calls to construct instances of the `B` cl
 
 ## Problem 2 - Inheritance/Dynamic Binding
 
--  a. Will the following code compile? If not, where exactly will it fail to compile?
+### a.
 
-   ```java
-   public class A {
-      public int x;
+Will the following code compile? If not, where exactly will it fail to compile?
 
-      public A(int x) {
-         this.x = x;
+```java
+public class A {
+   public int x;
+
+   public A(int x) {
+      this.x = x;
+   }
+}
+```
+
+```java
+public class B extends A {
+   public int y;
+
+   public B(int y) {
+      this.y = y;
+   }
+}
+```
+
+### b.
+
+Given:
+
+```java
+public class B {
+   public int x;
+
+   public String toString() {
+      return x + "";
+   }
+}
+```
+
+```java
+public class E extends B {
+   public int y = 3;
+
+   public String toString() {
+      return (x + y) + "";
+   }
+}
+```
+
+What is the output of the following code segment:
+
+```java
+public static void main(String[] args) {
+   B b = new E();
+   b.x = 5;
+   System.out.println(b);
+}
+```
+
+### c.
+
+Given:
+
+```java
+public class B {
+   private int x;
+
+   public int getX() {
+      return x;
+   }
+
+   public String toString() {
+      return x + "";
+   }
+}
+```
+
+```java
+public class E extends B {
+   public int y = 3;
+
+   public String toString() {
+      return getX() + y + "";
+   }
+}
+```
+
+What is the output of the following code segment, which is in a different class than `B` or `E`:
+
+```java
+public static void main(String[] args) {
+   B b = new E();
+   System.out.println(b);
+}
+```
+
+### d.
+
+Given:
+
+```java
+public class V {
+   public static int stuff() {
+      return 1;
+   }
+}
+```
+
+```java
+public class W extends V {
+   public static int stuff() {
+      return 2;
+   }
+}
+```
+
+What is the output of the following code segment, which is in a different class than `W` or `V`:
+
+```java
+public static void main(String[] args) {
+   V v = new W();
+   System.out.println(v.stuff());
+}
+```
+
+### e.
+
+Given:
+
+```java
+public class G {
+   public int g;
+}
+```
+
+```java
+public class H extends G {
+   public int h;
+
+   public boolean equals(Object o) {
+      if (o == null || !(o instanceof H)) {
+         return false;
       }
+      return g == ((H) o).g;
    }
-   ```
+}
+```
 
-   ```java
-   public class B extends A {
-      public int y;
+What is the output of the following code segment, which is in a different class than `H` or `G`:
 
-      public B(int y) {
-         this.y = y;
-      }
+```java
+public static void main(String[] args) {
+   G ag = new H();
+   ag.g = 15;
+   G bg = new G();
+   bg.g = 15;
+   if (ag.equals(bg)) {
+      System.out.println(10);
    }
-   ```
-
--  b. Given:
-
-   ```java
-   public class B {
-      public int x;
-
-      public String toString() {
-         return x + "";
-      }
+   else {
+      System.out.println(20);
    }
-   ```
+}
+```
 
-   ```java
-   public class E extends B {
-      public int y = 3;
+### f.
 
-      public String toString() {
-         return (x + y) + "";
-      }
+Given:
+
+```java
+public class B {
+   public int x;
+
+   public String toString() {
+      return x + "";
    }
-   ```
+}
+```
 
-   What is the output of the following code segment:
+```java
+public class E extends B {
+   public int y = 3;
 
-   ```java
-   public static void main(String[] args) {
-      B b = new E();
-      b.x = 5;
-      System.out.println(b);
+   public String toString() {
+      return (x + y) + "";
    }
-   ```
+}
+```
 
--  c. Given:
+What is the output of the following code segment, which is in a different class than `B` or `E`:
 
-   ```java
-   public class B {
-      private int x;
-
-      public int getX() {
-         return x;
-      }
-
-      public String toString() {
-         return x + "";
-      }
-   }
-   ```
-
-   ```java
-   public class E extends B {
-      public int y = 3;
-
-      public String toString() {
-         return getX() + y + "";
-      }
-   }
-   ```
-
-   What is the output of the following code segment, which is in a different class than `B` or `E`:
-
-   ```java
-   public static void main(String[] args) {
-      B b = new E();
-      System.out.println(b);
-   }
-   ```
-
--  d. Given:
-
-   ```java
-   public class V {
-      public static int stuff() {
-         return 1;
-      }
-   }
-   ```
-
-   ```java
-   public class W extends V {
-      public static int stuff() {
-         return 2;
-      }
-   }
-   ```
-
-   What is the output of the following code segment, which is in a different class than `W` or `V`:
-
-   ```java
-   public static void main(String[] args) {
-      V v = new W();
-      System.out.println(v.stuff());
-   }
-   ```
-
--  e. Given:
-
-   ```java
-   public class G {
-      public int g;
-   }
-   ```
-
-   ```java
-   public class H extends G {
-      public int h;
-
-      public boolean equals(Object o) {
-         if (o == null || !(o instanceof H)) {
-            return false;
-         }
-         return g == ((H) o).g;
-      }
-   }
-   ```
-
-   What is the output of the following code segment, which is in a different class than `H` or `G`:
-
-   ```java
-   public static void main(String[] args) {
-      G ag = new H();
-      ag.g = 15;
-      G bg = new G();
-      bg.g = 15;
-      if (ag.equals(bg)) {
-         System.out.println(10);
-      }
-      else {
-         System.out.println(20);
-      }
-   }
-   ```
-
--  f. Given:
-
-   ```java
-   public class B {
-      public int x;
-
-      public String toString() {
-         return x + "";
-      }
-   }
-   ```
-
-   ```java
-   public class E extends B {
-      public int y = 3;
-
-      public String toString() {
-         return (x + y) + "";
-      }
-   }
-   ```
-
-   What is the output of the following code segment, which is in a different class than `B` or `E`:
-
-   ```java
-   public static void main(String[] args) {
-      B b = new E();
-      System.out.println(b.y);
-   }
-   ```
+```java
+public static void main(String[] args) {
+   B b = new E();
+   System.out.println(b.y);
+}
+```
 
 ## Problem 3
 
