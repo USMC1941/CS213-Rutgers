@@ -259,7 +259,7 @@ Suppose you built a Java library of sorting algorithms: insertion sort, quicksor
 
 ### Question 2 Answer
 
-Write an interface called SortingAlgorithm with one or more methods called sort, and then write various sorting classes for the different sorting algorithms, that implement the SortingAlgorithm interface.
+Write an interface called `SortingAlgorithm` with one or more methods called sort, and then write various sorting classes for the different sorting algorithms, that implement the `SortingAlgorithm` interface.
 
 #### Interface Definition
 
