@@ -71,7 +71,7 @@ public class B extends A {
 
 #### Answer
 
-The class B will not compile. The error is that the constructor `B(int y)` implicitly calls the constructor `A()`, which does not exist. Constructors of subclasses must call, explicitly or implicitly, a valid constructor of the superclass (or transitively, through a call to another constructor in the same class), before any other statement in the method.
+The class `B` will not compile. The error is that the constructor `B(int y)` implicitly calls the constructor `A()`, which does not exist. Constructors of subclasses must call, explicitly or implicitly, a valid constructor of the superclass (or transitively, through a call to another constructor in the same class), before any other statement in the method.
 
 ### b.
 
@@ -158,7 +158,7 @@ Output: 3
 2. `E` does not have an explicit constructor, so the default constructor comes into play, which is called in the first statement above to initialize a new `E` object.
 3. The default constructor implictly calls `super()` on superclass `B`
 4. Since `B` does not explicitly define a constructor, again its default constructor comes into play, which does no initialization. This means the inherited `x` in `E` retains its default value of `0` set at object creation time
-5. In the second, `println` statement, the `toString()` version of `E` is called, by dynamic binding, which returns `0` (for `getX()`) + 3 (for `y`)
+5. In the second, `println` statement, the `toString()` version of `E` is called, by dynamic binding, which returns `0` (for `getX()`) `+ 3` (for `y`)
 
 ### d.
 
@@ -277,9 +277,9 @@ public static void main(String[] args) {
 
 #### Answer
 
-    Compile error.
+Compile error.
 
-    The compiler sees the statement `b.y`, and will pass it if there is a `y` field in class `B`, since `b` is of static type `B`. Since `B` does not have a `y` field, the compiler flags an error.
+The compiler sees the statement `b.y`, and will pass it if there is a `y` field in class `B`, since `b` is of static type `B`. Since `B` does not have a `y` field, the compiler flags an error.
 
 ## Problem 3
 
