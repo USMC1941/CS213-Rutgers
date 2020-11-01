@@ -119,6 +119,7 @@ public abstract class Shape implements Comparable<Shape> {
 
    public static final Shape biggest(Shape[] s) {
       /* TO BE COMPLETED BY YOU */
+      return null;
    }
 
    // OTHER METHODS/FIELDS YOU MAY NEED TO ADD TO ANSWER THE QUESTION
@@ -140,6 +141,12 @@ public class Circle extends Shape {
    public double getArea() {
       return Math.PI * radius * radius;
    }
+
+   @Override
+   public int compareTo(Shape o) {
+      /* TO BE COMPLETED BY YOU */
+      return 0;
+   }
 }
 ```
 
@@ -159,6 +166,12 @@ public class Rectangle extends Shape {
 
    public double getArea() {
       return length * height;
+   }
+
+   @Override
+   public int compareTo(Shape o) {
+      /* TO BE COMPLETED BY YOU */
+      return 0;
    }
 }
 ```
@@ -183,6 +196,7 @@ Complete the method
 ```java
 public static final Shape biggest(Shape[] s) {
    /* TO BE COMPLETED BY YOU */
+   return null;
 }
 ```
 
