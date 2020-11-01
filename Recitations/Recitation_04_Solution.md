@@ -163,7 +163,7 @@ Which of the following are valid uses of lambdas?
 
    ```java
    public List<T> filter(List<T> list, Predicate<T> p) {
-      List<T> res = new ArrayList<T>();
+      List<T> res = new ArrayList<>();
       for (T t : list) {
          if (p.test(t)) {
             res.add(t);
