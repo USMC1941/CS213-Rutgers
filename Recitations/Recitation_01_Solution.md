@@ -443,7 +443,7 @@ public class HeavyWidget extends Widget {
 
 The problem is the call `super(mass)` in the constructor. This call needs to be made because the first statement in a subclass constructor must be a call to a superclass constructor. Since there is only one constructor in the superclass `Widget`, which accepts a `float` parameter, we have no choice but to write in the `super(mass)` call. However, the `Widget` constructor would throw an exception if the `mass` exceeds `20`, even though `HeavyWeight` allows `mass` to be as much as `40`. So this is an issue.
 
-We can try to get around the issue by putting in a try-catch like this:
+We can try to get around the issue by putting in a `try`-`catch` like this:
 
 ```java
 public class HeavyWidget extends Widget {
