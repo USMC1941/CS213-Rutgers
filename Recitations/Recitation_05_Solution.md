@@ -108,7 +108,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    }
    ```
 
-   **Answer**: No. An abstract method cannot have a body.
+   **Answer**: No. An `abstract` method cannot have a body.
 
 4. ```java
    public abstract class X {
