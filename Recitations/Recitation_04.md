@@ -2,7 +2,7 @@
 
 Questions 3.3 and 4 refer to the `Student` class. (`Code/2017-02-16/Student.java`)
 
-## Question 1
+## Problem 1
 
 For each of the following expressions, tell whether it is valid or not. If valid, explain the reasoning. If not valid, explain why.
 
@@ -22,7 +22,7 @@ For each of the following expressions, tell whether it is valid or not. If valid
    (String s) -> { "Bourne Ultimatum"; }
    ```
 
-## Question 2
+## Problem 2
 
 Which of the following are functional interfaces?
 
@@ -49,7 +49,7 @@ Which of the following are functional interfaces?
    }
    ```
 
-## Question 3
+## Problem 3
 
 Which of the following are valid uses of lambdas?
 
@@ -81,7 +81,7 @@ Which of the following are valid uses of lambdas?
    BiFunction<Integer, Integer, String> bif = (int i, int j) -> "" + i + j;
    ```
 
-## Question 4
+## Problem 4
 
 1. Write a NAMED lambda expression using a method reference to check if a student is a senior.
 2. Write a NAMED lambda expression using a method reference to get the major of a student.

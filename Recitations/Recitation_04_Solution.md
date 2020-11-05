@@ -2,7 +2,7 @@
 
 Questions 3.3 and 4 refer to the `Student` class. (`Code/2017-02-16/Student.java`)
 
-## Question 1
+## Problem 1
 
 For each of the following expressions, tell whether it is valid or not. If valid, explain the reasoning. If not valid, explain why.
 
@@ -62,7 +62,7 @@ For each of the following expressions, tell whether it is valid or not. If valid
       (String s) -> { return "Bourne Ultimatum"; }
       ```
 
-## Question 2
+## Problem 2
 
 Which of the following are functional interfaces?
 
@@ -96,7 +96,7 @@ Which of the following are functional interfaces?
 
    **Answer**: No. There are two abstract methods.
 
-## Question 3
+## Problem 3
 
 Which of the following are valid uses of lambdas?
 
@@ -141,7 +141,7 @@ Which of the following are valid uses of lambdas?
 
    **Answer**: Invalid. The args for the lambda must be `Integers`. Auto conversion to `int` will not be done. (If you omit the data type for the arguments, it will work just fine.)
 
-## Question 4
+## Problem 4
 
 1. Write a NAMED lambda expression using a method reference to check if a student is a senior.
 

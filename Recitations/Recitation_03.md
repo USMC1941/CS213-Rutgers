@@ -1,8 +1,8 @@
 # Problem Set 3 - Interfaces
 
-## Question 1 - Short Questions
+## Problem 1 - Short Questions
 
-### Question 1
+### Problem 1
 
 Will the following code compile?
 
@@ -18,7 +18,7 @@ public class C implements Comparable<D> {
 }
 ```
 
-### Question 2
+### Problem 2
 
 Will the following code compile?
 
@@ -38,7 +38,7 @@ public class C implements Comparable<C>, Comparable<D> {
 }
 ```
 
-### Question 3
+### Problem 3
 
 Will the following code compile?
 
@@ -58,7 +58,7 @@ public class B extends A implements Comparable<B> {
 }
 ```
 
-### Question 4
+### Problem 4
 
 Will the following code compile?
 
@@ -78,7 +78,7 @@ public interface J {
 public class F implements I, J {}
 ```
 
-### Question 5
+### Problem 5
 
 Will the following code compile?
 
@@ -101,7 +101,7 @@ public class F implements I, J {
 }
 ```
 
-### Question 6
+### Problem 6
 
 Will the following code compile?
 
@@ -125,7 +125,7 @@ public class F implements I, J {
 }
 ```
 
-### Question 7
+### Problem 7
 
 Will the following code compile?
 
@@ -150,7 +150,7 @@ public class Searcher {
 }
 ```
 
-### Question 8
+### Problem 8
 
 Will the following code compile?
 
@@ -177,7 +177,7 @@ public class Searcher {
 }
 ```
 
-### Question 9
+### Problem 9
 
 Will the following code compile?
 
@@ -204,7 +204,7 @@ public class Searcher {
 }
 ```
 
-### Question 10
+### Problem 10
 
 Will the following code compile?
 
@@ -233,10 +233,10 @@ public class Searcher {
 }
 ```
 
-## Question 2
+## Problem 2
 
 Suppose you built a Java library of sorting algorithms: insertion sort, quicksort, and heapsort. You want to sell this library. How would you package your library using interfaces, so users could use any of these algorithms in their applications, and switch from using one to another (interface polymorphism), with the least amount of code rewrite?
 
-## Question 3
+## Problem 3
 
 Aside from the [`java.lang.Comparable<T>`](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Comparable.html) `interface` used for comparing objects of a class, the [`java.util`](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/package-summary.html) package has an interface, [`Comparator<T>`](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/Comparator.html) that may also be used to compare objects. What is the difference between these two interfaces, and how may this difference be usefully employed in applications?
