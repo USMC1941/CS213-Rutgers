@@ -179,7 +179,7 @@ public interface Monster {
 }
 ```
 
-Create an `abstract` base class `MovingMonster` for all monsters, and one subclass for each of two types discussed, `WalkingMonster` and `BouncingMonster`. Each monster will need to keep track of its own position and update it when the `updatePosition()` method is invoked. Assumethat the `Image` class has a method `draw(int x, int y)`. The contents of the `updatePosition()` method are not important, but it has to change the monster's position and be different for either monster.
+Create an `abstract` base class `MovingMonster` for all monsters, and one subclass for each of two types discussed, `WalkingMonster` and `BouncingMonster`. Each monster will need to keep track of its own position and update it when the `updatePosition()` method is invoked. Assume that the `Image` class has a method `draw(int x, int y)`. The contents of the `updatePosition()` method are not important, but it has to change the monster's position and be different for either monster.
 
 ## Problem 4
 
