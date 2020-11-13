@@ -18,7 +18,7 @@ public class C implements Comparable<D> {
 }
 ```
 
-**Answer**: Yes.
+**Solution**: Yes.
 
 ### Problem 2
 
@@ -40,7 +40,7 @@ public class C implements Comparable<C>, Comparable<D> {
 }
 ```
 
-**Answer**: No, you can't implement the same interface with different generic type arguments.
+**Solution**: No, you can't implement the same interface with different generic type arguments.
 
 ### Problem 3
 
@@ -62,7 +62,7 @@ public class B extends A implements Comparable<B> {
 }
 ```
 
-**Answer**: No, same as previous because when `B` extends `A`, it implicitly implements any interface(s) that `A` implements, namely `Comparable<A>`. So `B` ends up implementing `Comparable` twice, with `A` and `B` as generic type arguments, which is not allowed.
+**Solution**: No, same as previous because when `B` extends `A`, it implicitly implements any interface(s) that `A` implements, namely `Comparable<A>`. So `B` ends up implementing `Comparable` twice, with `A` and `B` as generic type arguments, which is not allowed.
 
 ### Problem 4
 
@@ -84,7 +84,7 @@ public interface J {
 public class F implements I, J {}
 ```
 
-**Answer**: No. `F` must implement methods of all the interfaces it implements.
+**Solution**: No. `F` must implement methods of all the interfaces it implements.
 
 ### Problem 5
 
@@ -109,7 +109,7 @@ public class F implements I, J {
 }
 ```
 
-**Answer**: Yes.
+**Solution**: Yes.
 
 ### Problem 6
 
@@ -135,7 +135,7 @@ public class F implements I, J {
 }
 ```
 
-**Answer**: No. Since the interface methods have the same name but different return types, there is no way for `F` to implement both without a naming conflict.
+**Solution**: No. Since the interface methods have the same name but different return types, there is no way for `F` to implement both without a naming conflict.
 
 ### Problem 7
 
@@ -162,7 +162,7 @@ public class Searcher {
 }
 ```
 
-**Answer**: Yes.
+**Solution**: Yes.
 
 ### Problem 8
 
@@ -191,7 +191,7 @@ public class Searcher {
 }
 ```
 
-**Answer**: Yes.
+**Solution**: Yes.
 
 ### Problem 9
 
@@ -220,7 +220,7 @@ public class Searcher {
 }
 ```
 
-**Answer**: No. The type `T` that is required by the search must either itself implement `Comparable<T>` or must have an ancestor in the inheritance hierarchy that implements `Comparable<T>`. `Z` implements `Comparable<X>`, but `Z` is not `X`, and neither is it a subclass of `X`.
+**Solution**: No. The type `T` that is required by the search must either itself implement `Comparable<T>` or must have an ancestor in the inheritance hierarchy that implements `Comparable<T>`. `Z` implements `Comparable<X>`, but `Z` is not `X`, and neither is it a subclass of `X`.
 
 ### Problem 10
 
@@ -251,13 +251,13 @@ public class Searcher {
 }
 ```
 
-**Answer**: Yes.
+**Solution**: Yes.
 
 ## Problem 2
 
 Suppose you built a Java library of sorting algorithms: insertion sort, quicksort, and heapsort. You want to sell this library. How would you package your library using interfaces, so users could use any of these algorithms in their applications, and switch from using one to another (interface polymorphism), with the least amount of code rewrite?
 
-### Problem 2 Answer
+### Problem 2 Solution
 
 Write an interface called `SortingAlgorithm` with one or more methods called `sort`, and then write various sorting classes for the different sorting algorithms, that implement the `SortingAlgorithm` interface.
 
@@ -305,7 +305,7 @@ public static void main(String[] args) {
 
 Aside from the [`java.lang.Comparable<T>`](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Comparable.html) `interface` used for comparing objects of a class, the [`java.util`](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/package-summary.html) package has an interface, [`Comparator<T>`](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/Comparator.html) that may also be used to compare objects. What is the difference between these two interfaces, and how may this difference be usefully employed in applications?
 
-### Problem 3 Answer
+### Problem 3 Solution
 
 Here's an example of a simplified user-defined type:
 

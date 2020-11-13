@@ -8,7 +8,7 @@ Also show code outlines for the classes involved, including fields that pertain 
 
 1. `Entry-Contributor` in Wikipedia.
 
-   **Answer**:
+   **Solution**:
 
    ```
          1..*           1..*
@@ -52,7 +52,7 @@ Also show code outlines for the classes involved, including fields that pertain 
 
 2. `Member--Seller--Bidder` on eBay.
 
-   **Answer**: `Seller` and `Bidder` are temporary roles played by `Member`. Which means these classes should not subclass from `Member`. Instead, they both delegate `Member` functions to a contained `Member` object.
+   **Solution**: `Seller` and `Bidder` are temporary roles played by `Member`. Which means these classes should not subclass from `Member`. Instead, they both delegate `Member` functions to a contained `Member` object.
 
    ```
           1      1          1       1
@@ -137,7 +137,7 @@ Also show code outlines for the classes involved, including fields that pertain 
 
 Suppose you are working on an Instagram software project. (If you are not familiar with it, see [Instagram](https://www.instagram.com), it is a social network service like Facebook). You are required to draw up a small portion of the UML, to describe relationships between users, the content they post (photos or videos, but could be other kinds), and tags they can apply to content (such as `'@'` or `'#'` tags, but there could be others.)
 
-**Answer**:
+**Solution**:
 ![Instagram UML](img/instagram_UML.png)
 
 ## Problem 3 - Class Diagram for Building a Room
@@ -151,5 +151,5 @@ We want to create a class diagram for building a Room that can contain `Walls`, 
 5. `Windows` and `Walls` inherit from `Structure` (which means that a `Windows` and a Wall has all the functionality of a `Structure` plus some added functionality implemented inside each of these classes)
 6. We can create more classes that inherit from `Furniture` and compose the `Room`.
 
-**Answer**:
+**Solution**:
 ![Room UML](img/room_UML.png)

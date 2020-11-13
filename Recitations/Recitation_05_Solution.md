@@ -4,7 +4,7 @@
 
 1. Write a class named `Outer` that contains an inner class named `Inner`. Add a method to `Outer` that returns an object of type `Inner`. `Outer` has a private `String` field (initialized by the constructor), and `Inner` has a `toString()` that displays this field. In `main()`, create and initialize a reference to an `Inner` and display it.
 
-   **Answer**:
+   **Solution**:
 
    ```java
    public class Outer {
@@ -34,7 +34,7 @@
 
 2. Write a class named `Outer2` that contains an inner class named `Inner`, and the `Outer2` class itself has a method that returns an instance of the inner class. In a separate class named `InnerApp`, make an instance of the inner class without creating an object of the outer class.
 
-   **Answer**:
+   **Solution**:
 
    ```java
    public class Outer2 {
@@ -90,7 +90,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    public abstract class X {}
    ```
 
-   **Answer**: Yes.
+   **Solution**: Yes.
 
 2. ```java
    public class X {
@@ -98,7 +98,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    }
    ```
 
-   **Answer**: No. Since the class has an `abstract` method, the header should have the `abstract` keyword.
+   **Solution**: No. Since the class has an `abstract` method, the header should have the `abstract` keyword.
 
 3. ```java
    public abstract class X {
@@ -108,7 +108,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    }
    ```
 
-   **Answer**: No. An `abstract` method cannot have a body.
+   **Solution**: No. An `abstract` method cannot have a body.
 
 4. ```java
    public abstract class X {
@@ -117,7 +117,7 @@ For each of the following, tell whether the code will compile. If not, explain w
       }
    }
    ```
-   **Answer**: Yes.
+   **Solution**: Yes.
 5. ```java
    public abstract class X {
       public abstract void stuff();
@@ -128,7 +128,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    public class Y extends X {}
    ```
 
-   **Answer**: No. If `Y` is not `abstract`, it must override the inherited method stuff with an implemented body. (Otherwise, `Y` should be declared as `abstract`.)
+   **Solution**: No. If `Y` is not `abstract`, it must override the inherited method stuff with an implemented body. (Otherwise, `Y` should be declared as `abstract`.)
 
 6. ```java
    public interface I {
@@ -149,7 +149,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    }
    ```
 
-   **Answer**: Yes.
+   **Solution**: Yes.
 
 7. ```java
    public abstract class X {
@@ -163,7 +163,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    }
    ```
 
-   **Answer**: Yes.
+   **Solution**: Yes.
 
 8. ```java
    public abstract class C {
@@ -177,7 +177,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    }
    ```
 
-   **Answer**: No. `C` is an `abstract` class, cannot be instantiated.
+   **Solution**: No. `C` is an `abstract` class, cannot be instantiated.
 
 9. ```java
    public abstract class C {
@@ -198,7 +198,7 @@ For each of the following, tell whether the code will compile. If not, explain w
    }
    ```
 
-   **Answer**: Yes.
+   **Solution**: Yes.
 
 ## Problem 3
 
@@ -206,7 +206,7 @@ There is an application that defines a `Person` class and a `Student` class. The
 
 Consider printing addresses of all people in the application, assuming there is a single array list that stores all `Person` and `Student` objects. How would the address that is printed for students depend on the way the `Student` class address methods are designed/implemented? What alternatives in design can you think of, and what are the pros and cons of these alternatives in printing the addresses?
 
-### Problem 3 Answer
+### Problem 3 Solution
 
 Every `Person` is expected to have one default home address, but `Student` can have another address for school.
 
@@ -330,7 +330,7 @@ public static final Shape biggest(Shape[] s) {
 
 in the `Shape` class. This method should return the shape with the largest area. Note that `Shape` implements the `Comparable` interface. Different `Shape`s should be compared using their area. Now if we extend the `Shape` hierarchy to include more shapes, say rhombus, then will your method run without any problems?
 
-### Problem 4 Answer
+### Problem 4 Solution
 
 ```java
 public abstract class Shape implements Comparable<Shape> {

@@ -6,19 +6,19 @@ Suppose classes `A` and `B` are in package `ab`, and classes `C` and `D` are in 
 
 1. Are `protected` members of `A` accessible in `C`? If yes, explain how. If not, explain why.
 
-   **Answer**: Protected members of `A` are inherited by `C`, but not accessible in `C` via instances of `A`.
+   **Solution**: Protected members of `A` are inherited by `C`, but not accessible in `C` via instances of `A`.
 
 2. Are `protected` members of `A` accessible in `D`? If yes, how? If not, why?
 
-   **Answer**: Protected members of `A` are _inherited_ by `D` via `B` (in other words, `B` inherits `protected` fields from `A`, and `D` from `B`), but as with `C`, `protected` members in `A` are not visible in `D` via instance of `A`.
+   **Solution**: Protected members of `A` are _inherited_ by `D` via `B` (in other words, `B` inherits `protected` fields from `A`, and `D` from `B`), but as with `C`, `protected` members in `A` are not visible in `D` via instance of `A`.
 
-3. Answer the same question as in 1. replacing `A` with `B`
+3. Solution the same question as in 1. replacing `A` with `B`
 
-   **Answer**: Protected members of `B` are _NOT_ inherited by `C`, nor are they accessible in `C` via instances of A, since C is in a different package than `B`, but does not extend `B`.
+   **Solution**: Protected members of `B` are _NOT_ inherited by `C`, nor are they accessible in `C` via instances of A, since C is in a different package than `B`, but does not extend `B`.
 
-4. Answer the same question as in 2. replacing `A` with `B`
+4. Solution the same question as in 2. replacing `A` with `B`
 
-   **Answer**: `D` inherits `protected` members of `B` since it subclasses from `B`.
+   **Solution**: `D` inherits `protected` members of `B` since it subclasses from `B`.
 
 ## Problem 2
 
@@ -28,7 +28,7 @@ Also show code outlines for the classes involved, including fields that pertain 
 
 1. `Document-Keyword `in a search engine
 
-   **Answer**:
+   **Solution**:
 
    ```
             *   Contains >>  *
@@ -57,7 +57,7 @@ Also show code outlines for the classes involved, including fields that pertain 
 
 2. `Friend-Friend` on Facebook
 
-   **Answer**:
+   **Solution**:
 
    ```
            -------
@@ -78,7 +78,7 @@ Also show code outlines for the classes involved, including fields that pertain 
 
 3. `Book-Chapter`
 
-   **Answer**:
+   **Solution**:
 
    ```
                1..*
@@ -113,7 +113,7 @@ Also show code outlines for the classes involved, including fields that pertain 
 
 4. `Parking Lot-Car`
 
-   **Answer**:
+   **Solution**:
 
    ```
                 1        *
@@ -144,7 +144,7 @@ You are on a project that is developing software to manage a hospital. In partic
 
 Draw a UML class diagram of your model, with just the names of classes (fields and methods not required), and relationships between them. Make sure to show multiplicities on associations.
 
-### Problem 3 Answer
+### Problem 3 Solution
 
 > Some small changes may have been made in recitation, especially with multiplicities, so treat this as a starting solution.
 

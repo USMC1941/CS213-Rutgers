@@ -10,7 +10,7 @@ For each of the following expressions, tell whether it is valid or not. If valid
    () -> { }
    ```
 
-   **Answer**: Valid. Corresponds to a method that takes no arguments, returns `void`, and has an empty body, e.g.
+   **Solution**: Valid. Corresponds to a method that takes no arguments, returns `void`, and has an empty body, e.g.
 
    ```java
    public void stuff() { }
@@ -20,7 +20,7 @@ For each of the following expressions, tell whether it is valid or not. If valid
    () -> "Hello"
    ```
 
-   **Answer**: Valid. Similar to previous, except it's written as an explicit statement inside curly braces.
+   **Solution**: Valid. Similar to previous, except it's written as an explicit statement inside curly braces.
 
    ```java
    public String stuff() {
@@ -32,7 +32,7 @@ For each of the following expressions, tell whether it is valid or not. If valid
    () -> { return "Goodbye"; }
    ```
 
-   **Answer**: Valid. Similar to previous, except it's written as an explicit statement inside curly braces.
+   **Solution**: Valid. Similar to previous, except it's written as an explicit statement inside curly braces.
 
    ```java
    public String stuff() {
@@ -44,13 +44,13 @@ For each of the following expressions, tell whether it is valid or not. If valid
    (Integer i) -> { return i + 10; }
    ```
 
-   **Answer**: Invalid. Since `return` is a control flow statement, it has to be enclosed within braces.
+   **Solution**: Invalid. Since `return` is a control flow statement, it has to be enclosed within braces.
 
 5. ```java
    (String s) -> { "Bourne Ultimatum"; }
    ```
 
-   **Answer**: Invalid. `"Bourne Ultimatum"` is an expression, not a statement. You can do either of the following to get a correct lambda expression:
+   **Solution**: Invalid. `"Bourne Ultimatum"` is an expression, not a statement. You can do either of the following to get a correct lambda expression:
 
    -  Move expression out of the braces:
       ```java
@@ -72,7 +72,7 @@ Which of the following are functional interfaces?
    }
    ```
 
-   **Answer**: Yes.
+   **Solution**: Yes.
 
 2. ```java
    public interface Sum2 extends Sum1 {
@@ -80,7 +80,7 @@ Which of the following are functional interfaces?
    }
    ```
 
-   **Answer**: No. `Sum2` has two methods.
+   **Solution**: No. `Sum2` has two methods.
 
 3. ```java
    public interface Rectangle {
@@ -94,7 +94,7 @@ Which of the following are functional interfaces?
    }
    ```
 
-   **Answer**: No. There are two abstract methods.
+   **Solution**: No. There are two abstract methods.
 
 ## Problem 3
 
@@ -113,7 +113,7 @@ Which of the following are valid uses of lambdas?
    do(() -> { });
    ```
 
-   **Answer**: Yes. The lambda takes no args and returns nothing, which matches the execute method of the `Executor` interface.
+   **Solution**: Yes. The lambda takes no args and returns nothing, which matches the execute method of the `Executor` interface.
 
 2. ```java
    public interface Proc<T> {
@@ -127,25 +127,25 @@ Which of the following are valid uses of lambdas?
    }
    ```
 
-   **Answer**: Valid. The lambda in the return takes no args and a `String`, which matches the process method of the `Proc` interface, with the binding of `String` to the generic type `T`.
+   **Solution**: Valid. The lambda in the return takes no args and a `String`, which matches the process method of the `Proc` interface, with the binding of `String` to the generic type `T`.
 
 3. ```java
    Predicate<Student> p = (Student s) -> s.getMajor();
    ```
 
-   **Answer**: Invalid. The lambda should return a `boolean`.
+   **Solution**: Invalid. The lambda should return a `boolean`.
 
 4. ```java
    BiFunction<Integer, Integer, String> bif = (int i, int j) -> "" + i + j;
    ```
 
-   **Answer**: Invalid. The args for the lambda must be `Integers`. Auto conversion to `int` will not be done. (If you omit the data type for the arguments, it will work just fine.)
+   **Solution**: Invalid. The args for the lambda must be `Integers`. Auto conversion to `int` will not be done. (If you omit the data type for the arguments, it will work just fine.)
 
 ## Problem 4
 
 1. Write a NAMED lambda expression using a method reference to check if a student is a senior.
 
-   **Answer**:
+   **Solution**:
 
    ```java
    Predicate<Student> is_senior = Student::isSenior;
@@ -153,7 +153,7 @@ Which of the following are valid uses of lambdas?
 
 2. Write a NAMED lambda expression using a method reference to get the major of a student.
 
-   **Answer**:
+   **Solution**:
 
    ```java
    Function<Student, String> major = Student::getMajor;
@@ -177,7 +177,7 @@ Which of the following are valid uses of lambdas?
 
    1. All non-CS majors
 
-      **Answer**:
+      **Solution**:
 
       ```java
       Predicate<Student> cs_major     = s -> s.getMajor().equals("CS");
@@ -186,7 +186,7 @@ Which of the following are valid uses of lambdas?
 
    2. All CS and Physics majors who are commuters.
 
-      **Answer**:
+      **Solution**:
 
       ```java
       Predicate<Student> physics_major = s -> s.getMajor().equals("Physics");
@@ -197,7 +197,7 @@ Which of the following are valid uses of lambdas?
 
    3. Math seniors who are not commuters
 
-      **Answer**:
+      **Solution**:
 
       ```java
       Predicate<Student> math_major = s -> s.getMajor().equals("Math");
@@ -206,7 +206,7 @@ Which of the following are valid uses of lambdas?
 
    4. Resident non-Math non-freshman students
 
-      **Answer**:
+      **Solution**:
 
       ```java
       Predicate<Student> is_freshman = Student::isFreshman;

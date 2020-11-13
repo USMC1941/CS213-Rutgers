@@ -22,7 +22,7 @@ public class X implements I {
 }
 ```
 
-**Answer**: No. Method `m` in `interface` `I` is declared `private`, but `interface` methods are always `public` and `abstract`.
+**Solution**: No. Method `m` in `interface` `I` is declared `private`, but `interface` methods are always `public` and `abstract`.
 
 ### Problem 2
 
@@ -45,7 +45,7 @@ public class X implements I {
 }
 ```
 
-**Answer**: Yes. Prints `"X:m1"`. `X` gets the default method `m` by virtue of implementing `interface` `I`, but overrides it with its own implementation.
+**Solution**: Yes. Prints `"X:m1"`. `X` gets the default method `m` by virtue of implementing `interface` `I`, but overrides it with its own implementation.
 
 ### Problem 3
 
@@ -73,7 +73,7 @@ public class XI extends X implements I {
 }
 ```
 
-**Answer**: Yes. Prints `"X:m1"`. Class `XI` gets conflicting method implementations of `m1` from superclass `X` and `interface` `I`. But according to the resolution rules for conflicts, class `X`'s implemetation of `m1` trumps `I`'s.
+**Solution**: Yes. Prints `"X:m1"`. Class `XI` gets conflicting method implementations of `m1` from superclass `X` and `interface` `I`. But according to the resolution rules for conflicts, class `X`'s implemetation of `m1` trumps `I`'s.
 
 ### Problem 4
 
@@ -101,7 +101,7 @@ public class C implements A, B {
 }
 ```
 
-**Answer**: Yes. Prints `"B!"`. Since `B` is more specific than `A`, class `C` gets `B`'s implementation of method `hello`.
+**Solution**: Yes. Prints `"B!"`. Since `B` is more specific than `A`, class `C` gets `B`'s implementation of method `hello`.
 
 ### Problem 5
 
@@ -129,7 +129,7 @@ public class X implements I, J {
 }
 ```
 
-**Answer**: No. Methods `getNumber` from `I` and `J` are conflicting.
+**Solution**: No. Methods `getNumber` from `I` and `J` are conflicting.
 
 ### Problem 6
 
@@ -157,7 +157,7 @@ public class X implements J, K {
 }
 ```
 
-**Answer**: Yes. Neither `J` nor `K` overrides the name method implementation of `K`, so there are no conflicting methods in `X`.
+**Solution**: Yes. Neither `J` nor `K` overrides the name method implementation of `K`, so there are no conflicting methods in `X`.
 
 ## Problem 2
 
@@ -177,7 +177,7 @@ public static Set intersect(Set firstSet, Set secondSet)
 
 Give one pro and one con for the `static` version.
 
-### Problem 2 Answer
+### Problem 2 Solution
 
 The `static` version of the method is semantically closer to the mathematical idea of set operations. The `static` approach makes it clear to programmers that the intersect method is a symmetric operation. The drawback of a `static` definition is that it cannot be overridden by subclasses if we wanted to extend the `Set` class and apply polymorphism.
 
@@ -197,7 +197,7 @@ public interface Monster {
 
 Create an `abstract` base class `MovingMonster` for all monsters, and one subclass for each of two types discussed, `WalkingMonster` and `BouncingMonster`. Each monster will need to keep track of its own position and update it when the `updatePosition()` method is invoked. Assume that the `Image` class has a method `draw(int x, int y)`. The contents of the `updatePosition()` method are not important, but it has to change the monster's position and be different for either monster.
 
-### Problem 3 Answer
+### Problem 3 Solution
 
 ```java
 public abstract class MovingMonster implements Monster {
@@ -255,7 +255,7 @@ Suppose we need to have the `Point` and `ColoredPoint` classes provide functiona
 2. How much of the `Point` implementation of this functionality is reused in `ColoredPoint`? (Reuse meaning using code from `Point` by calling on it in `ColoredPoint`.) If yes, indicate which part, else explain why not.
 3. Does your implementation give rise to dynamic binding of the parsing functionality? (Recall that dynamic binding means the subclass version of a method is "bound" to the call made via an object reference that is statically typed to the superclass.)
 
-### Problem 4 Answer
+### Problem 4 Solution
 
 1. In `Point` class:
 

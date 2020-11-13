@@ -69,7 +69,7 @@ public class B extends A {
 }
 ```
 
-#### Answer
+#### Solution
 
 The class `B` will not compile. The error is that the constructor `B(int y)` implicitly calls the constructor `A()`, which does not exist. Constructors of subclasses must call, explicitly or implicitly, a valid constructor of the superclass (or transitively, through a call to another constructor in the same class), before any other statement in the method.
 
@@ -107,7 +107,7 @@ public static void main(String[] args) {
 }
 ```
 
-#### Answer
+#### Solution
 
 Output: 8
 
@@ -150,7 +150,7 @@ public static void main(String[] args) {
 }
 ```
 
-#### Answer
+#### Solution
 
 Output: 3
 
@@ -189,7 +189,7 @@ public static void main(String[] args) {
 }
 ```
 
-#### Answer
+#### Solution
 
 Output: 1
 
@@ -220,7 +220,7 @@ public class H extends G {
 
 What is the output of the following code segment, which is in a different class than `H` or `G`:
 
-#### Answer
+#### Solution
 
 Output: 20
 
@@ -275,7 +275,7 @@ public static void main(String[] args) {
 }
 ```
 
-#### Answer
+#### Solution
 
 Compile error.
 
