@@ -40,7 +40,7 @@ public static void printPythagoreans(int limit) {
 
 ## Problem 4
 
-Write a method to generate fibonacci numbers upto a limit. The first two fibonacci numbers are `0` and `1`. So if the limit is `10`, the numbers generated will be `[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]` (Hint: use a 2-item array to store a pair of consecutive fibonacci numbers, and iterate on such 2-item arrays to do the progression)
+Write a method to generate Fibonacci numbers up to a limit. The first two Fibonacci numbers are `0` and `1`. So if the limit is `10`, the numbers generated will be `[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]` (Hint: use a 2-item array to store a pair of consecutive Fibonacci numbers, and iterate on such 2-item arrays to do the progression)
 
 ```java
 public static int[] fibs(int limit) {
