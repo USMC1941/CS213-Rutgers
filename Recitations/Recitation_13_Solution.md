@@ -53,8 +53,9 @@ Write a method to print all Pythagorean triples for which `a` and `b` are within
 
 ```java
 /**
- * Prints all pythagorean triples a,b,c where a and b are <= limit
- * each triple should be printed as "a,b,c"
+ * Prints all pythagorean triples a,b,c where a and b are <= limit.
+ * <p>
+ * Each triple should be printed as "a,b,c".
  */
 public static void printPythagoreans(int limit) {
    // COMPLETE THIS METHOD
@@ -65,8 +66,9 @@ public static void printPythagoreans(int limit) {
 
 ```java
 /**
- * Prints all pythagorean triples a,b,c where a and b are <= limit
- * each triple should be printed as "a,b,c"
+ * Prints all pythagorean triples a,b,c where a and b are <= limit.
+ * <p>
+ * Each triple should be printed as "a,b,c".
  */
 public static void printPythagoreans(int limit) {
    IntStream.rangeClosed(1, limit)
