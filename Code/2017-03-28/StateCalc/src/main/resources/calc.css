@@ -1,0 +1,8 @@
+.button {
+   -fx-font-size: 18pt;
+   -fx-font-weight: bold;
+}
+
+.text-field {
+   -fx-font-size: 18pt;
+}

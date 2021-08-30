@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import java.net.URL?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1"
+          hgap="10"
+          xmlns="http://javafx.com/javafx/8.0.40"
+          fx:controller="com.app.view.ResultController">
+
+    <Button fx:id="equalsButton" onAction="#resultPressed" text="      =      "/>
+    <Button fx:id="clearButton" onAction="#resultPressed" text="      C     " GridPane.columnIndex="1"/>
+
+    <stylesheets>
+        <URL value="@res.css"/>
+    </stylesheets>
+
+</GridPane>

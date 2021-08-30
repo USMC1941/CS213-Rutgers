@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import java.net.URL?>
+<?import java.util.ArrayList?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" hgap="10.0"
+          vgap="10.0"
+          xmlns="http://javafx.com/javafx/8.0.40"
+          fx:controller="com.app.view.DigitController">
+
+    <Button fx:id="d7" onAction="#digitPressed" text="  7  "/>
+    <Button fx:id="d8" onAction="#digitPressed" text="  8  " GridPane.columnIndex="1"/>
+    <Button fx:id="d9" onAction="#digitPressed" text="  9  " GridPane.columnIndex="2"/>
+    <Button fx:id="d4" onAction="#digitPressed" text="  4  " GridPane.rowIndex="1"/>
+    <Button fx:id="d5" onAction="#digitPressed" text="  5  " GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Button fx:id="d6" onAction="#digitPressed" text="  6  " GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+    <Button fx:id="d1" onAction="#digitPressed" text="  1  " GridPane.rowIndex="2"/>
+    <Button fx:id="d2" onAction="#digitPressed" text="  2  " GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Button fx:id="d3" onAction="#digitPressed" text="  3  " GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <Button fx:id="d0" onAction="#digitPressed" text="  0  " GridPane.rowIndex="3"/>
+
+    <Button fx:id="decimalButton" onAction="#digitPressed" text="   .   " GridPane.columnIndex="1"
+            GridPane.rowIndex="3"/>
+    <Button disable="true" onAction="#digitPressed" text=" +/- " GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+    <fx:define>
+        <ArrayList fx:id="digitButtons">
+            <fx:reference source="d0"/>
+            <fx:reference source="d1"/>
+            <fx:reference source="d2"/>
+            <fx:reference source="d3"/>
+            <fx:reference source="d4"/>
+            <fx:reference source="d5"/>
+            <fx:reference source="d6"/>
+            <fx:reference source="d7"/>
+            <fx:reference source="d8"/>
+            <fx:reference source="d9"/>
+        </ArrayList>
+    </fx:define>
+
+    <padding>
+        <Insets bottom="10.0" right="5.0" top="10.0"/>
+    </padding>
+
+    <stylesheets>
+        <URL value="@digits.css"/>
+    </stylesheets>
+
+</GridPane>

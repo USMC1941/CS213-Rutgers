@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import java.net.URL?>
+<GridPane
+        xmlns:fx="http://javafx.com/fxml/1"
+        xmlns="http://javafx.com/javafx/8.0.40"
+        fx:controller="com.app.view.CalcController">
+
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+
+    <TextField fx:id="display" editable="false" alignment="CENTER_RIGHT" GridPane.columnSpan="2"/>
+    <fx:include fx:id="digits" source="digits.fxml" GridPane.rowIndex="1"/>
+    <fx:include fx:id="ops" source="ops.fxml" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <fx:include fx:id="res" source="res.fxml" GridPane.rowIndex="2"/>
+
+    <stylesheets>
+        <URL value="@calc.css"/>
+    </stylesheets>
+</GridPane>
