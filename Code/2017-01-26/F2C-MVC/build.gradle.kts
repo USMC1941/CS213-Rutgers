@@ -20,9 +20,9 @@ java {
 }
 
 javafx {
-    modules("javafx.controls")
+    modules("javafx.controls", "javafx.fxml")
 }
 
 application {
-    mainClass.set("com.app.Main")
+    mainClass.set("com.app.F2CApp")
 }
