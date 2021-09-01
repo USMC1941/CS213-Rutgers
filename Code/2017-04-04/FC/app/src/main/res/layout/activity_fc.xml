@@ -15,25 +15,24 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/flabel"
             android:layout_marginRight="15dp"
+            android:text="@string/flabel"
             android:textSize="20dp" />
 
         <Button
 
+            android:id="@+id/f2c"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/f2clabel"
-            android:id="@+id/f2c"
             android:textSize="20dp" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_marginLeft="15dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:text="@string/clabel"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
 
     </TableRow>
 
@@ -42,31 +41,30 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_marginRight="15dp"
-            android:layout_height="wrap_content"
             android:id="@+id/fval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@android:drawable/editbox_background"
             android:hint="@string/f_hint"
-            android:textSize="20dp"
-            android:background="@android:drawable/editbox_background" />
+            android:textSize="20dp" />
 
         <Button
 
+            android:id="@+id/c2f"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/c2flabel"
-            android:id="@+id/c2f"
             android:textSize="20dp" />
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_height="wrap_content"
             android:id="@+id/cval"
-            android:hint="@string/c_hint"
-            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:background="@android:drawable/editbox_background"
-            />
+            android:hint="@string/c_hint"
+            android:textSize="20dp" />
 
     </TableRow>
 
