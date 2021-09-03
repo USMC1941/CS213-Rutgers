@@ -15,7 +15,6 @@
         android:text="@string/top1"
         android:id="@+id/top1"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <CheckBox
@@ -24,14 +23,14 @@
         android:text="@string/top2"
         android:id="@+id/top2"
         android:layout_below="@+id/top1"
-        android:layout_alignLeft="@+id/top1"/>
+        android:layout_alignStart="@+id/top1"/>
 
     <RadioGroup
         android:id="@+id/cheese_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/top2"
-        android:layout_alignLeft="@+id/top2">
+        android:layout_alignStart="@+id/top2">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -61,9 +60,7 @@
         android:text="@string/order_button"
         android:id="@+id/button"
         android:layout_below="@+id/top2"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="44dp"
         android:layout_marginEnd="44dp"
         android:onClick="showSandwich" />
 
@@ -76,6 +73,6 @@
         android:text="@string/output"
         android:id="@+id/output"
         android:layout_below="@+id/cheese_group"
-        android:layout_alignLeft="@+id/cheese_group"/>
+        android:layout_alignStart="@+id/cheese_group"/>
 
 </RelativeLayout>
