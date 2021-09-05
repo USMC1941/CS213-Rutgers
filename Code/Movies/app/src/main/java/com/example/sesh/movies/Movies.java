@@ -169,7 +169,7 @@ public class Movies extends AppCompatActivity {
         }
 
         // redo Adapter since source content has changed
-        listView.setAdapter(new ArrayAdapter<Movie>(this, movie, movies));
+        listView.setAdapter(new ArrayAdapter<>(this, movie, movies));
 
     }
 
