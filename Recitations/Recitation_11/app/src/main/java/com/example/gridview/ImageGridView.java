@@ -3,7 +3,6 @@ package com.example.gridview;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -19,13 +18,13 @@ public class ImageGridView extends AppCompatActivity {
         setContentView(R.layout.grid_view);
 
         myImgAdapter = new ImageAdapter(this);
-        GridView gridview = (GridView) findViewById(R.id.gridview);
+        GridView gridview = findViewById(R.id.gridview);
         gridview.setAdapter(myImgAdapter);
 
         gridview.setOnItemClickListener((parent, v, position, id) -> {
             LayoutInflater inflater = getLayoutInflater();
             View view = inflater.inflate(R.layout.toast_layout,
-                    (ViewGroup) findViewById(R.id.relativeLayout1));
+                    findViewById(R.id.relativeLayout1));
             view.setBackgroundResource(myImgAdapter.getImgID(position));
 
             Toast toast = new Toast(parent.getContext());
