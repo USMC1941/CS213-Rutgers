@@ -4,11 +4,11 @@ Worth 40 points (4% of course grade.)
 
 You will work in **pairs** on this assignment. Read the [DCS Academic Integrity Policy for Programmming Assignments](http://www.cs.rutgers.edu/academics/undergraduate/academic-integrity-policy/programming-assignments) - you are responsible for this.
 
-**Make sure your project is NOT modular: if you are using Eclipse, when you create the project choose **Don't create** when the create module-info.java dialog pops up.**
+> Make sure your project is NOT modular: if you are using Eclipse, when you create the project choose **Don't create** when the create module-info.java dialog pops up.
 
 Here is a good starting [documentation](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm) to explore Java FX. [Work with UI Controls](https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/ui_controls.htm#JFXUI336) and [Work with Layouts](https://docs.oracle.com/javase/8/javafx/layout-tutorial/index.html) are the most relevant links on that page.
 
-Java Version: Java 11 or higher should be fine.
+Java Version: You must use Java 11 or higher.
 
 ## Requirements
 
@@ -44,10 +44,14 @@ Most of the aspects of design (layouts and widgets) and implementation (event ha
 
 ### Note
 
--  You **MUST use Java FX** for all UI-related code. (No Swing stuff.)
+-  You **MUST use JavaFX** for all UI-related code. (No Swing stuff.)
 -  In your app, there should be **only ONE window** for all user interaction.
 -  The layout for this single application window should be in **fxml ONLY**. In other words, none of the UI elements should be created using Java code.
 -  You may use pop-ups ONLY to show an error message, or to ask for confirm/cancel of an action, but NOT for anything else - all inputs and edits must be done in the single main window.
+
+   For the pop-up dialogs, you will NOT be using fxml since you can work with the standard dialog UIs in the JavaFX framework.
+
+   > Note: Switching scenes within the main window is fine, since no new windows are popped up. Also, partitioning the main window into various sub-areas is also fine for the same reason.
 
 ## Grading
 
@@ -62,15 +66,17 @@ For the first three items, the grade will depend on correctness and completeness
 
 **Effective/appropriate** means the UI should be clear, the user should know exactly what to expect when events are triggered, the user should know exactly what to do to achieve their objective. **If you need to explain to someone how to use the interface, then it's not a good enough interface.**
 
-**IMPORTANT**: Your UI should not use widgets that are an overkill for the task at hand because if a complex widget is used for a simple task, it will confuse the user. So, for instance, do NOT use a table view to show song details because the requirements do not ask you to dynamically rearrange the display on user request. If you do so, you will lose credit - see the Point Deductions section at the end of this document.
+**IMPORTANT**: Your UI should not use widgets that are an overkill for the task at hand because if a complex widget is used for a simple task, it will confuse the user. So, for instance, do NOT use a table view to show song details because the requirements do not ask you to dynamically rearrange the display on user request. If you do so, you will lose credit - see the [Point Deductions](#point-deductions) section at the end of this document.
 
 Finally, your UI is not required to be aesthetically pleasing (no points for this because it's highly subjective), but you are most welcome to dazzle us with your creativity (just for the heck of it!) as long as it does not get in the way of clean functionality.
 
 You may use any of the classes in the standard Java SDK, but **no external third-party libraries EXCEPT if you want to use JSON to store and retrieve song data.** If you elect to use JSON, you will need to use a JSON library (`jar`) - inform your grader so that they know to get the library when they test your app.
 
+Alternatively, you may use the CSV format to store song data, but you do not need an external library to process CSV - see the [FAQs](#faq) (last question).
+
 ## Submission Instructions
 
-Make sure your project is NOT modular: if you are using Eclipse, when you create the project choose Don't create when the create module-info.java dialog pops up.
+> Make sure your project is NOT modular: if you are using Eclipse, when you create the project choose **Don't create** when the create module-info.java dialog pops up.
 
 You may implement the application in as many files as you want, but you MUST call your main class `SongLib` (this is the class with the `main` method.)
 
@@ -80,11 +86,13 @@ Make sure to write your names at the top of each of the Java source files in you
 
 -  **If you are using Eclipse:**
 
-   Export your project to a zip file called `songlib.zip` (see how to do this in the Eclipse page, under "Zipping up a Project"). Make sure you have done this correctly by importing it back as a project into Eclipse (see "Importing a Zipped Project into Eclipse" in the Eclipse page). Since you are working pairs, a good test would be for one of you to zip the project, and for the other to import the zipped project into their Eclipse installation.
+   Export your project to a zip file called `songlib.zip`. Make sure you have done this correctly by importing it back as a project into Eclipse. Since you are working pairs, a good test would be for one of you to zip the project, and for the other to import the zipped project into their Eclipse installation.
 
--  **If you are not using Eclpse:**
+-  **If you are not using Eclipse:**
 
    Zip your project structure into `songlib.zip`, and make sure to inform your grader so that they know not to treat it like an Eclipse project file.
+
+Submit your `songlib.zip` file. Just ONE submission per team.
 
 ## Point Deductions
 
@@ -108,3 +116,41 @@ Be aware that implementing design and functionality as specified, and submitting
 -  Points will be deducted for each test case that cannot be tried because either your data file or your UI does not allow for testing it. The exact number of points will depend the point value of the test case(s).
 -  **No credit**, if you used any external libraries--you are only allowed to use the standard Java SDK, and optionally JSON (with permission from grader).
 -  **No credit**, if your program does not compile, or cannot be run. This is a course in software development, there is NO excuse to submit something that does not compile or does not run.
+
+## FAQ
+
+-  **Q.** Can I use [SceneBuilder](https://gluonhq.com/products/scene-builder/) to make my fxml?
+
+   **A.** Yes.
+
+-  **Q.** Can we switch scenes in the main window? Or would that still be considered a popup/multiple windows?
+
+   **A.** You can switch scenes, you are not popping up an independent window by doing this.
+
+-  **Q.** What characters are permitted for song name, artist, and album?
+
+   **A.** Any printable character except `'|'` (vertical bar)
+
+-  **Q.** If user enters leading/trailing spaces for name, artist, or album, should we get rid of them?
+
+   **A.** Yes.
+
+-  **Q.** Are we required to show lowercase versions of name and artist when displaying the song info?
+
+   **A.** When you show the info (list or details), it should be exactly as the user entered (so they are not surprised). But when you sort in your code, it should be case insensitive.
+
+-  **Q.** For the year, do we have to take into account the BC/AD stuff?
+
+   **A.** No, the only thing you need to check is that it is a positive integer.
+
+-  **Q.** Are we allowed to place the text file with the song list directly under the project folder? If not, is there a particular place that we should put it in?
+
+   **A.** It should be under the project folder, but not under the code folders. So either directly under the project folder, or you can make a data folder under project, and then put the text file there. (Grading wise, we don't have any requirement as such, so what I am saying here is just best practice.)
+
+-  **Q.** Do JSON files count as human readable?
+
+   **A.** Yes. "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write." ([json.org](https://www.json.org/json-en.html))
+
+-  **Q.** If we use CSV file format for storing the data, are we allowed to use external libraries.
+
+   **A.** To use CSV [you don't need external libraries](https://stackabuse.com/reading-and-writing-csvs-in-java/), but if you do want to use externals, make sure to inform your grader so they know what library to use when they test your application. (WARNING! A song name, artist, or album could well have a comma in it, so using comma as a separator between fields is a bad idea.)
