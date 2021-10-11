@@ -35,7 +35,7 @@ Note:
 
 Your program needs to accept input of the form `"FileRank FileRank"`, where the first file (column) and rank (row) are the coordinates of the piece to be moved, and the second file and rank are the coordinates of where it should end up. (See the board example shown above.)
 
-The figure immediately below should make it clear which rank and file combinations belong to which squares. The white pieces always intially occupy ranks `1` and `2`. The black pieces always initially occupy ranks `7` and `8`. The queen always starts on the d file.
+The figure immediately below should make it clear which rank and file combinations belong to which squares. The white pieces always intially occupy ranks `1` and `2`. The black pieces always initially occupy ranks `7` and `8`. The queen always starts on the `d` file.
 
 ![Chess Example](img/SCD_algebraic_notation.svg)
 
@@ -65,6 +65,7 @@ A player may offer a draw by appending `"draw?"` to the end of an otherwise regu
 ## Grading
 
 -  **Correctness, 90 pts**: Implementation of all required functionality including drawing the board:
+
    -  All legitimate basic moves for all pieces
    -  Castling
    -  Enpassant
@@ -75,13 +76,16 @@ A player may offer a draw by appending `"draw?"` to the end of an otherwise regu
    -  Resign
    -  Draw
    -  Drawing board display as specified
+
+   > Note: You are NOT required to implement stalemate.
+
 -  **Javadoc, 10 pts**: Comment ALL classes, fields, and methods with Javadoc tags (not just plain comments). Also, make sure you record your name in each Java file with the `@author` Javadoc tag. Run `javadoc` to generate the Javadoc HTML documentation
 
-   There are numerous online resources that show how to write Javadoc comments, and how to use the `javadoc` tool. It's pretty straightforward.
+   There are numerous online resources that show how to write Javadoc comments, and how to use the `javadoc` tool. Here's one such [resource](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html). It's pretty straightforward.
 
 -  Penalties
 
-   -  10 pts: ANY deviation from specified format for drawing the board such as extra spaces, extra blank lines, weird characters, other sketchy artwork, etc.
+   -  5 pts: ANY deviation from specified format for drawing the board such as extra spaces, extra blank lines, weird characters, other sketchy artwork, etc.
    -  5 pts: Game starts with black making the first move
    -  5 pts: Javadoc HTML not generated
    -  Up to 5 pts: Incomplete Javadoc tags in code
@@ -91,9 +95,9 @@ A player may offer a draw by appending `"draw?"` to the end of an otherwise regu
 
       NOTE: This 2 hour block will be applied STRICTLY starting any time after `XX` PM (even if it is one second), in increments of 2 hours. NO EXCEPTIONS.
 
-## Submission/Code Maintenance in Bitbucket (No, you may NOT use Github)
+## Submission/Code Maintenance in Bitbucket (No, you may NOT use GitHub)
 
-Use the Git/Bucket page to know how create a repository in Bitbucket (**and NO, you may NOT use Github!!!**) and manage it using Git. There is a comprehensive walk through of all the features you need to know to manage your code collaboratively. **In particular, all Git examples are shown on the command line, which is the recommended way to use Git from your computer**. This is because it is clear as to what's going on, so it is easy to recover from mistakes, if any. (Using an app/plugin with a GUI generally hides a lot of things under the hood, and if things go awry you may not have enough transparent info to work with and fix things.)
+Use the Git/Bucket page to know how create a repository in Bitbucket (**and NO, you may NOT use GitHub!!!**) and manage it using Git. There is a comprehensive walk through of all the features you need to know to manage your code collaboratively. **In particular, all Git examples are shown on the command line, which is the recommended way to use Git from your computer**. This is because it is clear as to what's going on, so it is easy to recover from mistakes, if any. (Using an app/plugin with a GUI generally hides a lot of things under the hood, and if things go awry you may not have enough transparent info to work with and fix things.)
 
 Create a new repository and give your grader read access.
 
@@ -110,6 +114,10 @@ Thereafter, you will make commits incrementally, as and when you add reasonable 
 In any case, do NOT use Bitbucket like a Sakai assignment drop, not making any commits after the first, and then making the second one the final commit just before the deadline. If you do this, you are wasting a great chance to learn an important skill you will be required to use in real projects, and will have one less thing to show to prospective employers.
 
 ## Frequently Asked Questions
+
+**Q:** Can we assume the input will always be separated by `" "`? That is, no inputs like `"h7 h6draw?"` or `"h6 h7N"`. In addition, is extra space allowed? For example `"h7 h6 "` or `" h7 h6"` or `"e2 e4"`.
+
+**A:** All inputs will have exactly one space between components, such as `"e2 e4"`, or `"g7 g7 N"`. And there won't be any leading or trailing spaces.
 
 **Q:** Do we have to implement a rule where a player is not allowed to make an otherwise valid move if it will immediately put their king in check?
 
@@ -143,6 +151,6 @@ In any case, do NOT use Bitbucket like a Sakai assignment drop, not making any c
 
 **A:** Yes
 
-**Q:** Can we use Github instead of Bitbucket?
+**Q:** Can we use GitHub instead of Bitbucket?
 
 **A:** No
