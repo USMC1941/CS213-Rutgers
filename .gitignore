@@ -70,3 +70,5 @@ $RECYCLE.BIN/
 
 .vscode
 .project
+.settings
+bin/

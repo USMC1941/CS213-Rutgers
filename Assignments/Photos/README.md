@@ -90,6 +90,7 @@ Note: If you elect to implement passwords for users, make `"admin"` the password
    -  Delete albums
    -  Rename albums
    -  Open an album. Opening an album displays all photos, with their thumbnail images and captions, inside that album. Once an album is open the user can do the following:
+
       -  Add a photo
       -  Remove a photo
       -  Caption/recaption a photo
@@ -97,8 +98,12 @@ Note: If you elect to implement passwords for users, make `"admin"` the password
       -  Add a tag to a photo
       -  Delete a tag from a photo
       -  Copy a photo from one album to another (multiple albums may have copies of the same photo)
+
+         > Note: If a photo is in multiple albums, it is the same physical photo, just refereneced/contained in multiple albums. This means any changes you make to the photo (caption, tags) will be reflected in all the albums in which the photo appears.
+
       -  Move a photo from one album (source) to another (the photo will be removed from the source album)
       -  Go through photos in an album in sequence forward or backward, one at a time, with user interaction (manual slideshow)
+
    -  Search for photos (Photos that match the search criteria should be displayed in a similar way to how photos in an album are displayed). Under this, you should provide the following specific features:
 
       1. Search for photos by a date range.
@@ -219,3 +224,73 @@ Lateness penalties (separate from penalties above):
 -  10 pts: For every 2 hours of lateness, in case there is nothing in the repository for us to test as of the deadline of YYYY-MM-DD.
 
    **NOTE: This 2 hour block will be applied STRICTLY starting any time after 11 PM (even if it is one second), in increments of 2 hours. NO EXCEPTIONS.**
+
+## Frequently Asked Questions
+
+-  **Q:** Can we draw the storyboard by hand on paper, then submit a picture?
+
+   **A:** No. It should be drawn on using software - we are aiming for a professional look!
+
+-  **Q:** Are search criteria disjoint, user can search photo for EITHER date range or tag type-value pairs or can they search for a tag type-value pair within a certain date range?
+
+   **A:** Date range and tag-value pairs are disjoint for searches. So either date range or tag-value pairs, but not together.
+
+-  **Q:** What photo formats are allowed?
+
+   **A:** BMP, GIF, JPEG, PNG. See [this tutorial](https://www.tutorialspoint.com/how-to-display-an-image-in-javafx).
+
+-  **Q:** Do we need to show standard dialogs ([Alert](https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/Alert.html), [TextInputDialog](https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/TextInputDialog.html)) in our storyboard?
+
+   **A:** You need not show error/confirmation dialogs. But you must show any dialog that is getting user input, whether it is a standard dialog (boilerplate JavaFX), or a dialog you designed with FXML.
+
+-  **Q:** Should we preserve the aspect ratio of the image the user views?
+
+   **A:** Not a requirement (i.e. you won't lose credit if you don't), but preserving the aspect ratio is encouraged.
+
+-  **Q:** Does admin also have albums and everything else, like non-admin user? Or just edit/create/delete user?
+
+   **A:** No. admin can only create/delete user, and list all users.
+
+-  **Q:** If we have two tags like `"person": "Alice"` and `"person": "Bob"`. Should we store them in two different tags? Or we should do it in a single tag `"person":"Alice; Bob"`? Or both are fine?
+
+   **A:** You should store them in two different tags, one per person.
+
+-  **Q:** Do we need to display photos/users/albums in sorted order?
+
+   **A:** No.
+
+-  **Q:** Is a user allowed to have duplicates of the same picture in the same album?
+
+   **A:** No.
+
+-  **Q:** Can a user edit the date of a photo?
+
+   **A:** No. The date of the photo is basically the date of the photo file, it can't be modified in the app
+
+-  **Q:** If you have already added a photo to one album, can you add it to another album (via importing the photo again) not copying or moving the photo?
+
+   **A:** Yes. But it is equivalent to copying. And be sure to read the note in the assignment description (in red) on copying a photo from one album to another since the same rules apply in this situation.
+
+-  **Q:** Are we allowed to have duplicate users?
+
+   **A:** No.
+
+-  **Q:** Can there be photos that are not in an album?
+
+   **A:** No, every photo must be in at least one album.
+
+-  **Q:** When we delete an album are we also deleting all references to the photos that were in the now deleted album?
+
+   **A:** When you delete an album, all the references to photos from that album will be deleted. But if a photo is in a different album as well, that album will still refer to the photo.
+
+-  **Q:** Should the fields for JavaFX components in our classes need to be shown in the UML diagram?
+
+   **A:** No, you don't need to include FX fields.
+
+-  **Q:** Should we include FX controller classes in the UML?
+
+   **A:** Yes, because they contain logic that verifies user input, and to communicate data to the non-UI logic in the app.
+
+-  **Q:** Should stock be auto-generated every time the program is run, in case admin deletes the "stock" user?
+
+   **A:** No, you don't need to have functionality to recreate stock if deleted.
