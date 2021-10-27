@@ -26,10 +26,10 @@ If you are not clear about any of this, or have ANY questions or issues, CHECK w
 
 Note:
 
--  Every piece must know what moves are allowed on it. If a player attempts an illegal move on a piece, your program should not execute the move. Instead, it should print `"Illegal move, try again"`, followed by the usual prompt (for white's move or black's move).
--  When a move is made, and it puts the opponent's King under check, your program should print `"Check"` before prompting for the opponent's move.
--  If a checkmate is detected, your program should print `"Checkmate"`
--  The last thing before termination should be a display of `"Black wins"`, `"White wins"` or `"draw"`.
+- Every piece must know what moves are allowed on it. If a player attempts an illegal move on a piece, your program should not execute the move. Instead, it should print `"Illegal move, try again"`, followed by the usual prompt (for white's move or black's move).
+- When a move is made, and it puts the opponent's King under check, your program should print `"Check"` before prompting for the opponent's move.
+- If a checkmate is detected, your program should print `"Checkmate"`
+- The last thing before termination should be a display of `"Black wins"`, `"White wins"` or `"draw"`.
 
 ## Input
 
@@ -53,47 +53,47 @@ If checkmate occurs, the game shall end immediately with the result reported.
 
 A player may resign by entering "resign".
 
--  [Example of white resigning](ex_res_w.txt)
--  [Example of black resigning](ex_res_b.txt)
+- [Example of white resigning](ex_res_w.txt)
+- [Example of black resigning](ex_res_b.txt)
 
 A player may offer a draw by appending `"draw?"` to the end of an otherwise regular move. The draw may be accepted by the other player submitting `"draw"` as the entirety of his or her next move. There will be no automatic draws (due to unchanging positions over long periods of time, etc).
 
--  [Example of a draw](ex_draw.txt)
+- [Example of a draw](ex_draw.txt)
 
 **You are NOT required to implement termination by threefold repetition, or the fifty-move rule**. (You are welcome to include them in your code to make it complete; however, there is no extra credit for either.)
 
 ## Grading
 
--  **Correctness, 90 pts**: Implementation of all required functionality including drawing the board:
+- **Correctness, 90 pts**: Implementation of all required functionality including drawing the board:
 
-   -  All legitimate basic moves for all pieces
-   -  Castling
-   -  Enpassant
-   -  Promotion
-   -  Identification of check
-   -  Identifcation of checkmate
-   -  Identification of illegal move (print "Illegal move, try again")
-   -  Resign
-   -  Draw
-   -  Drawing board display as specified
+  - All legitimate basic moves for all pieces
+  - Castling
+  - Enpassant
+  - Promotion
+  - Identification of check
+  - Identifcation of checkmate
+  - Identification of illegal move (print "Illegal move, try again")
+  - Resign
+  - Draw
+  - Drawing board display as specified
 
-   > Note: You are NOT required to implement stalemate.
+  > Note: You are NOT required to implement stalemate.
 
--  **Javadoc, 10 pts**: Comment ALL classes, fields, and methods with Javadoc tags (not just plain comments). Also, make sure you record your name in each Java file with the `@author` Javadoc tag. Run `javadoc` to generate the Javadoc HTML documentation
+- **Javadoc, 10 pts**: Comment ALL classes, fields, and methods with Javadoc tags (not just plain comments). Also, make sure you record your name in each Java file with the `@author` Javadoc tag. Run `javadoc` to generate the Javadoc HTML documentation
 
-   There are numerous online resources that show how to write Javadoc comments, and how to use the `javadoc` tool. Here's one such [resource](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html). It's pretty straightforward.
+  There are numerous online resources that show how to write Javadoc comments, and how to use the `javadoc` tool. Here's one such [resource](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html). It's pretty straightforward.
 
--  Penalties
+- Penalties
 
-   -  5 pts: ANY deviation from specified format for drawing the board such as extra spaces, extra blank lines, weird characters, other sketchy artwork, etc.
-   -  5 pts: Game starts with black making the first move
-   -  5 pts: Javadoc HTML not generated
-   -  Up to 5 pts: Incomplete Javadoc tags in code
-   -  5 pts (individual): No Bitbucket commit by `YYYY-MM-DD`.
-   -  10 pts: Every time you ask us and we test another commit version in your repository that is earlier than the last commit before the deadline.
-   -  10 pts: For every 2 hours of lateness, in case there is nothing in the repository for us to test as of the deadline of `YYYY-MM-DD`.
+  - 5 pts: ANY deviation from specified format for drawing the board such as extra spaces, extra blank lines, weird characters, other sketchy artwork, etc.
+  - 5 pts: Game starts with black making the first move
+  - 5 pts: Javadoc HTML not generated
+  - Up to 5 pts: Incomplete Javadoc tags in code
+  - 5 pts (individual): No Bitbucket commit by `YYYY-MM-DD`.
+  - 10 pts: Every time you ask us and we test another commit version in your repository that is earlier than the last commit before the deadline.
+  - 10 pts: For every 2 hours of lateness, in case there is nothing in the repository for us to test as of the deadline of `YYYY-MM-DD`.
 
-      NOTE: This 2 hour block will be applied STRICTLY starting any time after `XX` PM (even if it is one second), in increments of 2 hours. NO EXCEPTIONS.
+    NOTE: This 2 hour block will be applied STRICTLY starting any time after `XX` PM (even if it is one second), in increments of 2 hours. NO EXCEPTIONS.
 
 ## Submission/Code Maintenance in Bitbucket (No, you may NOT use GitHub)
 
@@ -115,42 +115,42 @@ In any case, do NOT use Bitbucket like a Sakai assignment drop, not making any c
 
 ## Frequently Asked Questions
 
-**Q:** Can we assume the input will always be separated by `" "`? That is, no inputs like `"h7 h6draw?"` or `"h6 h7N"`. In addition, is extra space allowed? For example `"h7 h6 "` or `" h7 h6"` or `"e2 e4"`.
+- **Q:** Can we assume the input will always be separated by `" "`? That is, no inputs like `"h7 h6draw?"` or `"h6 h7N"`. In addition, is extra space allowed? For example `"h7 h6 "` or `" h7 h6"` or `"e2 e4"`.
 
-**A:** All inputs will have exactly one space between components, such as `"e2 e4"`, or `"g7 g7 N"`. And there won't be any leading or trailing spaces.
+  **A:** All inputs will have exactly one space between components, such as `"e2 e4"`, or `"g7 g7 N"`. And there won't be any leading or trailing spaces.
 
-**Q:** Do we have to implement a rule where a player is not allowed to make an otherwise valid move if it will immediately put their king in check?
+- **Q:** Do we have to implement a rule where a player is not allowed to make an otherwise valid move if it will immediately put their king in check?
 
-**A:** Yes. This qualifies as an illegal move.
+  **A:** Yes. This qualifies as an illegal move.
 
-**Q:** Do we need to worry about bad input, like a player entering `"draw"` without being asked by the other player, or just entering things that don't make sense?
+- **Q:** Do we need to worry about bad input, like a player entering `"draw"` without being asked by the other player, or just entering things that don't make sense?
 
-**A:** No
+  **A:** No
 
-**Q:** The assignment says we have to print `"Illegal move, try again"` if the player attempts an illegal move, but can we print more specific messages to identify the kind of illegal move?
+- **Q:** The assignment says we have to print `"Illegal move, try again"` if the player attempts an illegal move, but can we print more specific messages to identify the kind of illegal move?
 
-**A:** No, you must stick with the described format.
+  **A:** No, you must stick with the described format.
 
-**Q:** Will differences in output such as `"White is in checkmate"` instead `"Black wins"` be OK?
+- **Q:** Will differences in output such as `"White is in checkmate"` instead `"Black wins"` be OK?
 
-**A:** No, it's not ok. Your program should print `"Checkmate"` (followed by `"White wins"` or `"Black wins"`).
+  **A:** No, it's not ok. Your program should print `"Checkmate"` (followed by `"White wins"` or `"Black wins"`).
 
-**Q:** We saw rules elsewhere on castling/what-have-you that go beyond the description on the linked Wikipedia page. Should we implement those?
+- **Q:** We saw rules elsewhere on castling/what-have-you that go beyond the description on the linked Wikipedia page. Should we implement those?
 
-**A:** No, we are going with the Wikipedia page only. We are not all practiced Chess players.
+  **A:** No, we are going with the Wikipedia page only. We are not all practiced Chess players.
 
-**Q:** Should we print the board out again if the user tries to input an illegal move?
+- **Q:** Should we print the board out again if the user tries to input an illegal move?
 
-**A:** No
+  **A:** No
 
-**Q:** If an opponent's piece is captured, should we indicate a captured piece?
+- **Q:** If an opponent's piece is captured, should we indicate a captured piece?
 
-**A:** No
+  **A:** No
 
-**Q:** For the resign examples, should we add `"Black wins"` or `"White wins"` at the end?
+- **Q:** For the resign examples, should we add `"Black wins"` or `"White wins"` at the end?
 
-**A:** Yes
+  **A:** Yes
 
-**Q:** Can we use GitHub instead of Bitbucket?
+- **Q:** Can we use GitHub instead of Bitbucket?
 
-**A:** No
+  **A:** No
