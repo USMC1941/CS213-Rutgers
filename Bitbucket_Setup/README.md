@@ -71,7 +71,7 @@ README
 
 For those of you who aren't super familiar with unix, that business with a
 
-```
+```console
 $ cat >
 ```
 
@@ -255,7 +255,7 @@ both modified: README
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-In this case, two collaborators edited the same line in README in two different ways. The README file in the working copy has been modified to make it easy to spot the conflict.
+In this case, two collaborators edited the same line in `README` in two different ways. The `README` file in the working copy has been modified to make it easy to spot the conflict.
 
 ```diff
 this is just a simple file to read
