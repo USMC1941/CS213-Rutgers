@@ -22,9 +22,10 @@ public class MovieDialogFragment extends DialogFragment {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        builder.setMessage(Objects.requireNonNull(bundle).getString(MESSAGE_KEY)).setPositiveButton("OK", (dialog, id) -> {
-            // NOTHING TO DO
-        });
+        builder.setMessage(Objects.requireNonNull(bundle).getString(MESSAGE_KEY))
+                .setPositiveButton("OK", (dialog, id) -> {
+                    // NOTHING TO DO
+                });
         // Create the AlertDialog object and return it
         return builder.create();
     }

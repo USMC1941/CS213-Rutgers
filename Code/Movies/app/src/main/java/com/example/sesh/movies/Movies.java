@@ -1,7 +1,5 @@
 package com.example.sesh.movies;
 
-import static com.example.sesh.movies.R.layout.movie;
-
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -95,7 +93,7 @@ public class Movies extends AppCompatActivity {
     }
 
     private void showMovieList() {
-        listView.setAdapter(new ArrayAdapter<>(this, movie, movies));
+        listView.setAdapter(new ArrayAdapter<>(this, R.layout.movie, movies));
 
         // show movie for possible edit when tapped
         listView.setOnItemClickListener((parent, view, position, id) -> showMovie(position));
@@ -169,8 +167,7 @@ public class Movies extends AppCompatActivity {
         }
 
         // redo Adapter since source content has changed
-        listView.setAdapter(new ArrayAdapter<>(this, movie, movies));
-
+        listView.setAdapter(new ArrayAdapter<>(this, R.layout.movie, movies));
     }
 
     @Override
@@ -204,7 +201,6 @@ public class Movies extends AppCompatActivity {
                     }
                 });
          */
-
 
         return super.onCreateOptionsMenu(menu);
     }
