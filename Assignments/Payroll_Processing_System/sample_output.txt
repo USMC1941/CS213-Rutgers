@@ -1,0 +1,162 @@
+Payroll Processing starts.
+Command 'pa' not supported!
+Command 'pd' not supported!
+Command 'ph' not supported!
+Employee database is empty.
+Command 'r' not supported!
+Employee database is empty.
+Command 'c' not supported!
+Command 's' not supported!
+Employee database is empty.
+Employee database is empty.
+Employee database is empty.
+Employee database is empty.
+Employee added.
+Employee added.
+Employee added.
+--Printing earning statements for all employees--
+Doe,Jane::CS::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $45.90::Hours worked this period: 0
+Doe,Jane::ECE::1/1/2005::Payment $0.00::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::2/28/2012::Payment $0.00::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Calculation of employee payments is done.
+--Printing earning statements for all employees--
+Doe,Jane::CS::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $45.90::Hours worked this period: 0
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Employee is already in the list.
+Employee is already in the list.
+Employee is already in the list.
+Employee added.
+Employee added.
+Invalid management code.
+Invalid management code.
+Employee added.
+--Printing earning statements for all employees--
+Doe,Jane::CS::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $45.90::Hours worked this period: 0
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 0
+Doe,Jane::ECE::3/31/2005::Payment $0.00::FULL TIME::Annual Salary $69,900.00
+Doe,Jane::ECE::6/28/2012::Payment $0.00::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Employee added.
+Employee added.
+Employee is already in the list.
+--Printing earning statements for all employees--
+Doe,Jane::CS::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $45.90::Hours worked this period: 0
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 0
+Doe,Jane::ECE::3/31/2005::Payment $0.00::FULL TIME::Annual Salary $69,900.00
+Doe,Jane::ECE::6/28/2012::Payment $0.00::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Doe,Jane::IT::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $25.90::Hours worked this period: 0
+Doe,Jane::IT::1/1/2005::Payment $0.00::FULL TIME::Annual Salary $78,000.00
+'it' is not a valid department code.
+'ece' is not a valid department code.
+'cs' is not a valid department code.
+'AA' is not a valid department code.
+Employee added.
+2/2/200 is not a valid date!
+6/29/2021 is not a valid date!
+Calculation of employee payments is done.
+--Printing earning statements for all employees--
+Doe,Jane::CS::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $45.90::Hours worked this period: 0
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 0
+Doe,Jane::ECE::3/31/2005::Payment $2,688.46::FULL TIME::Annual Salary $69,900.00
+Doe,Jane::ECE::6/28/2012::Payment $4,182.92::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Doe,Jane::IT::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $25.90::Hours worked this period: 0
+Doe,Jane::IT::1/1/2005::Payment $3,000.00::FULL TIME::Annual Salary $78,000.00
+Doe,Jane::CS::2/29/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Working hours set.
+--Printing earning statements for all employees--
+Doe,Jane::CS::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $45.90::Hours worked this period: 0
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 100
+Doe,Jane::ECE::3/31/2005::Payment $2,688.46::FULL TIME::Annual Salary $69,900.00
+Doe,Jane::ECE::6/28/2012::Payment $4,182.92::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Doe,Jane::IT::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $25.90::Hours worked this period: 0
+Doe,Jane::IT::1/1/2005::Payment $3,000.00::FULL TIME::Annual Salary $78,000.00
+Doe,Jane::CS::2/29/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Employee removed.
+Employee removed.
+Employee removed.
+--Printing earning statements for all employees--
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 100
+Doe,Jane::ECE::6/28/2012::Payment $4,182.92::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Doe,Jane::IT::1/1/2005::Payment $3,000.00::FULL TIME::Annual Salary $78,000.00
+Doe,Jane::CS::2/29/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Employee does not exist.
+Employee does not exist.
+Employee does not exist.
+--Printing earning statements by department--
+Doe,Jane::CS::2/29/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 100
+Doe,Jane::ECE::6/28/2012::Payment $4,182.92::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::1/1/2005::Payment $3,000.00::FULL TIME::Annual Salary $78,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+--Printing earning statements by date hired--
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::1/1/2005::Payment $3,000.00::FULL TIME::Annual Salary $78,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::CS::2/29/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Doe,Jane::ECE::6/28/2012::Payment $4,182.92::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 100
+Employee added.
+Employee added.
+Employee added.
+Salary cannot be negative.
+Employee added.
+Pay rate cannot be negative.
+Employee added.
+--Printing earning statements for all employees--
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::1/1/2005::Payment $3,000.00::FULL TIME::Annual Salary $78,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::CS::2/29/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Doe,Jane::ECE::6/28/2012::Payment $4,182.92::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 100
+Doe,John::CS::2/29/2008::Payment $0.00::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Brown,Charlie::IT::10/28/2012::Payment $0.00::FULL TIME::Annual Salary $75,500.00::Department Head Compensation $365.38
+Doe,John::CS::7/11/2019::Payment $0.00::PART TIME::Hourly Rate $40.00::Hours worked this period: 0
+Moore,Lucy::CS::1/31/2012::Payment $0.00::FULL TIME::Annual Salary $70,000.00
+Doe,Jane::IT::7/1/2020::Payment $0.00::PART TIME::Hourly Rate $22.00::Hours worked this period: 0
+Working hours set.
+Working hours set.
+Calutlation of employee payments is done.
+--Printing earning statements by department--
+Doe,Jane::CS::2/29/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Doe,John::CS::2/29/2008::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,John::CS::7/11/2019::Payment $3,200.00::PART TIME::Hourly Rate $40.00::Hours worked this period: 80
+Moore,Lucy::CS::1/31/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Doe,Jane::ECE::6/28/2012::Payment $4,182.92::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Doe,Jane::ECE::8/1/2020::Payment $4,290.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 100
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Brown,Charlie::IT::10/28/2012::Payment $3,269.23::FULL TIME::Annual Salary $75,500.00::Department Head Compensation $365.38
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::IT::1/1/2005::Payment $3,000.00::FULL TIME::Annual Salary $78,000.00
+Doe,Jane::IT::7/1/2020::Payment $1,694.00::PART TIME::Hourly Rate $22.00::Hours worked this period: 77
+Employee added.
+Working hours cannot be negative.
+Invalid Hours: over 100.
+Invalid Hours: over 100.
+Working hours set.
+Calculation of employee payments is done.
+--Printing earning statements by date hired--
+Doe,Jane::ECE::1/1/2005::Payment $3,269.23::FULL TIME::Annual Salary $85,000.00
+Doe,Jane::IT::1/1/2005::Payment $3,000.00::FULL TIME::Annual Salary $78,000.00
+Doe,John::CS::2/29/2008::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Moore,Lucy::CS::1/31/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
+Doe,Jane::CS::2/29/2012::Payment $2,692.31::FULL TIME::Annual Salary $70,000.00
+Doe,Jane::ECE::6/28/2012::Payment $4,182.92::FULL TIME::Annual Salary $96,756.00::Director Compensation $461.54
+Brown,Charlie::IT::10/28/2012::Payment $3,269.23::FULL TIME::Annual Salary $75,500.00::Department Head Compensation $365.38
+Harrison,Rob::CS::10/31/2018::Payment $3,282.51::PART TIME::Hourly Rate $32.99::Hours worked this period: 93
+Doe,John::CS::7/11/2019::Payment $3,200.00::PART TIME::Hourly Rate $40.00::Hours worked this period: 80
+Doe,Jane::IT::7/1/2020::Payment $1,694.00::PART TIME::Hourly Rate $22.00::Hours worked this period: 77
+Doe,Jane::ECE::8/1/2020::Payment $4,290.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 100
+Payroll Processing completed.
