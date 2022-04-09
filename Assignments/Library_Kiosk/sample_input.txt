@@ -1,0 +1,61 @@
+pa
+a
+pd
+AA
+PP
+RR
+PA
+PD
+PN
+A,Programming in Java,3/20/2010
+A,Software Methodology,4/1/2018
+A,Artificial Intelligence,12/01/2005
+A,Linear Algebra,1/31/2020
+A,Clean Code,3/31/2010
+A,Pro Git,4/30/2018
+A,Design Patterns,5/30/1996
+A,Data Science,2/29/2008
+PA
+PD
+PN
+A,Programming in C++,3/20/2011
+A,Object Oriented Analysis and Design,4/30/2018
+A,Refactoring,1/31/2005
+A,Java for Dummies,1/31/2020
+A,Database Management Systems,2/28/2010
+A,eXtreme Programming,2/10/2010
+A,Doing Agile Right,5/30/1996
+A,Data Structure with Java,2/29/2008
+PA
+r,10012
+R,10012
+R,10012
+PA
+o,10012
+O,10012
+i,10012
+I,10012
+O,10015
+O,10015
+PA
+i,10015
+I,10015
+PA
+PD
+R,10005
+PA
+A,A fun book,31/2/2000
+A,A fun book,13/2/2020
+A,A fun book,2/29/2021
+A,A fun book,2/29/2009
+A,A fun book,4/31/2009
+A,A fun book,3/32/2009
+A,A fun book,3/31/1800
+A,A fun book,10/30/2022
+A,A fun book,3/30/2021
+
+
+
+Q
+
+A,this line should not be processed,11/11/2020
