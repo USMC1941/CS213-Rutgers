@@ -58,7 +58,7 @@ Let's assume the system maintains an employee database, which may include 3 diff
 
 8. In addition to the classes in #6, you must include the 5 classes listed below. **-5 points** for each class missing. You CANNOT do I/O in all classes, EXCEPT the `PayrollProcessing` class, and the `print` methods in the `Company` class. **-2 points** for each violation. The floating-point numbers must be displayed with 2 decimal places. **-1 point** for each violation.
 
-    1. `Date` class. Import this class from your Project 1 (Library Kiosk). The class implements the Java Interface `Comparable`. You must implement the overriding `compareTo()` method, or you will **lose 2 points**.
+    1. `Date` class. Import this class from the Library Kiosk Project. The class implements the Java Interface `Comparable`. You must implement the overriding `compareTo()` method, or you will **lose 2 points**.
 
         > See [`Date.java`](src/Date.java)
 
@@ -159,9 +159,9 @@ Let's assume the system maintains an employee database, which may include 3 diff
 
             and stop the program execution.
 
-    5. `RunProject2` class. This is the driver class to run Project 2.
+    5. `RunProject2` class. This is the driver class to run the project.
 
         > See [`RunProject2.java`](src/RunProject2.java)
 
-9. You must follow the instructions in the **Software Development Ground Rules** and comment your code. You are required to generate the Javadoc after you properly commented your code. Your Javadoc must include the documentations for the constructors, private methods and public methods of all Java classes. Generate the Javadoc in a single folder and include it in your project folder to be submitted to Canvas. You will **lose 5 points** for not including the Javadoc.
+9. You must follow the instructions in the **Software Development Ground Rules** and comment your code. You are required to generate the Javadoc after you properly commented your code. Your Javadoc must include the documentations for the constructors, private methods and public methods of all Java classes. Generate the Javadoc in a single folder and include it in your project folder to be submitted. You will **lose 5 points** for not including the Javadoc.
 10. You must create a JUnit test class for `Company` class, and write test cases for the `add()`, `remove()` and `setHours()` methods. You are also required to create a JUnit test class for `Management` class, and write test cases for the `calculatePayment()` method. Each test method is worth 5 points.
