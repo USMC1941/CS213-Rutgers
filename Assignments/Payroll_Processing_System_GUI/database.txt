@@ -1,0 +1,12 @@
+S,Jane,Doe,500.0,11/1/2019,false
+S,John,Doe,500.0,1/1/2010,true
+C,Jane,Doe,500.0,2/29/2008,false
+C,Richard,Scanlan,1500.0,7/31/2014,false
+C,Jason,Brown,300.12,6/28/2015,false
+S,Mary,Johnson,2000.88,7/31/2014,true
+S,Charlie,Brown,800.0,6/28/2015,false
+M,Mary,Johnson,456.78,7/10/2014,0
+M,Charlie,Brown,600.33,6/2/2015,6
+M,Forever,Young,2934.45,2/21/2020,7
+C,Jerry,Anderson,1001.4,9/23/2020,false
+S,Tom,Moore,1001.4,9/23/2020,false
