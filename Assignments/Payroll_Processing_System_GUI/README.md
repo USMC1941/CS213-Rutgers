@@ -1,6 +1,6 @@
 # CS213 - Payroll Processing System GUI
 
-Submission
+## Submission
 
 -   You must include both team members’ names in the comment block on top of EVERY Java file.
 -   Your project folder must include the following subfolders/files for grading.
